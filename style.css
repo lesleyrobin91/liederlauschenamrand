@@ -204,8 +204,8 @@ p:last-child {
     padding-bottom: 60%;
 }
 
-.bg-desk {
-    background-image: url('/images/l2r-desk.jpg');
+.bg-plant {
+    background-image: url('/images/plants.jpg');
     background-position: 50% 65%;    
 }
 
