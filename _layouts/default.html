@@ -10,40 +10,13 @@
         <!-- Header -->
         <header class="grid"> 
             <div class="col-6_sm-3_xs-12-middle">
-                <a href="/en/" class="logo"> L2R </a>
-                
-            </div>
-
-            {% unless page.not-translated == true %}
-            <div class="col-3_xs-6-middle right">
-                <a href="{{ page.url | replace: '/en/', '/' }}"> DE </a>
-            </div>
-            {% endunless %}
-
-            <nav class="col-3_sm-6-middle padded-0 right">
-                <a href="/en/vision"> Vision </a>
-                <a href="/blog"> Blog </a>
-            </nav>
-        </header >
-
-        {% else %}
-
-        <!-- Header -->
-        <header class="grid"> 
-            <div class="col-6_sm-3_xs-12-middle">
                 <a href="/" class="logo"> L2R </a>
-                
-            </div>
-            <div class="col-3_xs-6-middle right">
-                <a href="/en{{ page.url }}"> EN </a>
             </div>
             <nav class="col-3_sm-6-middle padded-0 right">
                 <a href="/vision"> Mission </a>
                 <a href="/blog"> Blog </a>
             </nav>
         </header >
-
-        {% endif %}
 
         {{ content }}
 
