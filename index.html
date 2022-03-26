@@ -1,43 +1,37 @@
 ---
 layout: default
 seo:
-   title: l2r design.
+   title: liederlauschenamrand
    description: >-
-      Web design and development tailormade to the needs of your business.
-      Unique designs meet responsive, mobile-first website builds combined with
-      an easy CMS.
+      lorem ipsum
    social_image:
    keywords: >-
-      l2r, web design, web development, tailormade websites, website
-      development, responsive website, seo optimization, easy cms, unique
-      website, flexible website
+      lorem ipsum
    hide-from-google: true
-popup-gallery: true
-gallery-background: bg-lightblue
 gallery:
   - column-size: col-4_sm-12
     aspect-ratio: square
-    background_image: /images//images/plants.jpg
+    background_image: /images/plants.jpg
     type: dog
   - column-size: col-4_sm-12
     aspect-ratio: square
-    background_image: /images//images/plants.jpg
+    background_image: /images/plants.jpg
     type: dog
   - column-size: col-4_sm-12
     aspect-ratio: square
-    background_image: /images//images/plants.jpg
+    background_image: /images/plants.jpg
     type: dog
   - column-size: col-12
     aspect-ratio: landscape
-    background_image: /images//images/plants.jpg
+    background_image: /images/plants.jpg
     type: cat
   - column-size: col-6_sm-12
     aspect-ratio: square
-    background_image: /images//images/plants.jpg
+    background_image: /images/plants.jpg
     type: rabbit
   - column-size: col-6_sm-12
     aspect-ratio: square
-    background_image: /images//images/plants.jpg
+    background_image: /images/plants.jpg
     type: rabbit
 ---
 <!-- Intro Banner -->
@@ -47,23 +41,19 @@ gallery:
             LIEDERLAUSCHEN <br /> AM RAND
         </h1>
         <p class="subheading padded-1"> 08 - 10 July 20222 </p> 
-        <a href="#" class="button"> Tickets </a>
+        <a href="#" class="button button-tickets"> Tickets </a>
     </div>
 </section>
 
 
 <!--------------- LLAR Section --------------->
-<section class="grid-center-middle padded-1 tall-60">
+<section class="grid-center-middle padded-1 tall-60 editable">
 
-    <div class="col-12 center padded-1 padded-b-0">
-        <h2 class="editable "> Liederlauschen am Rand </h2>
-    </div>
     <div class="col-9 center">
-        <p class="padded-b-1 padded-t-0"> Stadt – Land – Heimat: das ist für uns der Wunsch nach Vielfalt und Vertrautheit. </p>
+        <h2 class="padded-2"> Liederlauschen am Rand </h2>
+        <p class="padded-b-1"> Stadt – Land – Heimat: das ist für uns der Wunsch nach Vielfalt und Vertrautheit. </p>
         <p class="padded-b-1"> Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen Reichtum des Landes zusammenbringen und nachhaltig verbinden. </p> 
-        <p> Wir sind ein familienfreundliches – wir sind ein familiäres Festival. Wir limitieren uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur und uns selbst behutsam umgehen. </p>
-    </div>
-    <div class="col-12 center">
+        <p class="padded-b-1"> Wir sind ein familienfreundliches – wir sind ein familiäres Festival. Wir limitieren uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur und uns selbst behutsam umgehen. </p>
         <a href="#" class="button"> Weiterlesen</a>
     </div>    
 
@@ -102,60 +92,21 @@ gallery:
 </section>
 
 
-<!--------------- Impressionen Section --------------->
-<section class="grid-center-middle padded-1">
+<!-- Standard Gallery -->
+<section class="center padded capped-width-narrow">
+    <h2> Impressionen vom Rand </h2>
 
-    {% if page.popup-gallery == true %}
-    <!-- Popup Gallery -->
-    <section class="padded 
-        {% if page.gallery-background == 'bg-lightblue' %} bg-lightblue {% endif %}">
+    <div class="gallery grid">
 
-        <h2> Impressionen vom Rand </h2>
-        <div class="gallery grid" id="lightgallery">
-
-            {% for item in page.gallery %}
-            {% if item.type != 'dog' %}
-            <a class="{{item.column-size}}" href="{{item.background_image}}"> 
-                <div class="bg-image {{item.aspect-ratio}}" 
-                     style="background-image: url('{{item.background_image}}');"> 
-                </div>
-            </a>
-            {% endif %}
-            {% endfor %}
-
-        </div>
-
-        <div class="gallery grid padded" id="lightgallery-2">
-
-            <a class="button" href="/images/plants.jpg" title="Project"> View our work </a>
-            <a href="/images/plants.jpg" title="Project 1"> </a>
-            <a href="/images/plants.jpg" title="Project 2"> </a>
-            <a href="/images/plants.jpg" title="Project 3"> </a>
-            <a href="/images/plants.jpg" title="Project 4"> </a>
-            <a href="/images/plants.jpg" title="Project 5"> </a>
-            <a href="/images/plants.jpg" title="Project 6"> </a>
-
-        </div>
-      </section>
-        
-    {% else %}
-      </section>
-
-    <!-- Standard Gallery -->
-    <section class="padded">
-        <h2> Standard Gallery </h2>
-        <div class="gallery grid">
-
-            {% for item in page.gallery %}
-            <div class="{{item.column-size}}"> 
-                <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
-                </div>
+        {% for item in page.gallery %}
+            
+        <div class="{{item.column-size}}"> 
+            <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
             </div>
-            {% endfor %}
-
         </div>
-      </section>
+        
+        {% endfor %}
 
-    {% endif %}
-
+    </div>
 </section>
+

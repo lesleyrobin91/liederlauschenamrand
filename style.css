@@ -189,6 +189,12 @@ p:last-child {
     border-radius: 4%;
 }
 
+.logo {
+    background-image: url('/images/Theater.png');
+    background-size: cover; 
+    min-height: 100%;
+}
+
 .bg-image-main{
     background-color: #F9F7F3;
     background-size: cover;
@@ -208,6 +214,8 @@ p:last-child {
     background-image: url('/images/plants.jpg');
     background-position: 50% 65%;    
 }
+
+.gallery [class*="col-"]  { padding: 0.5%;}
 
 /* icon*/
 
@@ -261,6 +269,11 @@ a:hover{
     text-transform: uppercase;
 }
 
+.button-tickets {
+    color: #F9F7F3; 
+    background-color: #EF2751;
+}
+
 .button-nl{
     color: #F9F7F3; 
     background-color: #28258B;
@@ -274,6 +287,11 @@ a:hover{
 .button-nl:hover{
     background-color: #F9F7F3;
     color: #28258B;
+}
+
+.button-tickets:hover{
+    background-color: #F9F7F3;
+    color: #EF2751;
 }
 
 /* Default Responsive Styles*/
