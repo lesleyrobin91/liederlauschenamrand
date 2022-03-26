@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        {% include head.html %}
+
+    </head>
+    <body> 
+
+        {% include cookie-banner.html %}
+
+        {% if page.language == "english" %}
+
+        <!-- Header -->
+        <header class="grid"> 
+            <div class="col-6_sm-3_xs-12-middle">
+                <a href="/en/" class="logo"> L2R </a>
+                
+            </div>
+
+            {% unless page.not-translated == true %}
+            <div class="col-3_xs-6-middle right">
+                <a href="{{ page.url | replace: '/en/', '/' }}"> DE </a>
+            </div>
+            {% endunless %}
+
+            <nav class="col-3_sm-6-middle padded-0 right">
+                <a href="/en/vision"> Vision </a>
+                <a href="/blog"> Blog </a>
+            </nav>
+        </header >
+
+        {% else %}
+
+        <!-- Header -->
+        <header class="grid"> 
+            <div class="col-6_sm-3_xs-12-middle">
+                <a href="/" class="logo"> L2R </a>
+                
+            </div>
+            <div class="col-3_xs-6-middle right">
+                <a href="/en{{ page.url }}"> EN </a>
+            </div>
+            <nav class="col-3_sm-6-middle padded-0 right">
+                <a href="/vision"> Mission </a>
+                <a href="/blog"> Blog </a>
+            </nav>
+        </header >
+
+        {% endif %}
+
+        {{ content }}
+
+
+        <!-- footer -->
+        <footer class="grid padded padded-b-0 bg-light" id="contact">
+            <div class="col-6_sm-12 padded center-sm">
+                <h2 class="logo"> L2R design. </h2>
+            </div>
+            <div class="col-6_sm-12-bottom padded center-sm right">
+                <h3> Let's Connect. </h3>
+                <nav> 
+                    <a href="mailto:lesleyrudolph@icloud.com"> <i class="fas fa-envelope"></i> </a>
+                    <a href="https://www.instagram.com/lesley.robin"> <i class="fab fa-instagram"></i> </a>
+                    <a href="https://www.facebook.com/lesley.stiller"> <i class="fab fa-facebook-f"></i> </a>
+                </nav>
+            </div>
+            <div class="col-12 center padded-t">
+                <p class="subtle"> Copyright 2021 </p>
+            </div>
+        </footer>
+
+        <!--------------------- Add jQuery -------------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+
+        <!-------------- custom javascript files -------------->
+        <script src="/scripts.js"></script>    
+
+    </body>
+</html>

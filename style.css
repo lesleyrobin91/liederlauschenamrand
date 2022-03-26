@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* because Gridlex adds a negative space to the grids and depending on the design this can be quirky */
+[class*=grid] { margin:0; }
+[class*=col] { padding:0; }
+
+section { position: relative; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Re-usable utility classes */
+
+.tall-50 { min-height: 50vh; }
+.tall-60 { min-height: 60vh; }
+.tall-70 { min-height: 70vh; }
+.tall-80 { min-height: 80vh; }
+.tall-90 { min-height: 90vh; }
+
+
+.padded    { padding: 5%;    }
+.padded-1  { padding: 1rem;  }
+.padded-2  { padding: 2rem;  }
+.padded-3  { padding: 3rem;  }
+
+
+.padded-t  { padding-top: 5%;     }
+.padded-b  { padding-bottom: 5%;  }
+.padded-l  { padding-left: 5%;    }
+.padded-r  { padding-right: 5%;   }
+
+.padded-0 { padding: 0; }
+.padded-b-0 { padding-bottom: 0; }
+.padded-b-1 { padding-bottom: 1rem; }
+.margin-b-0 { margin-bottom: 0; }
+
+.margin-b-1 {margin-bottom: 1rem;}
+.margin-b-2 {margin-bottom: 2rem;}
+.margin-t-1 {margin-top: 1rem;}
+.margin-t-2 {margin-top: 2rem;}
+
+.bg-light     { background-color: #F9F7F3; }
+.bg-dark {background-color: #f1ece2;}
+
+.bg-green     { background-color: #9b9b81;}
+.bg-green-light { background-color: #dfdfd7;}
+.bg-rust     { background-color: #a2745c;  }
+
+.landscape {padding-bottom: 60%;}
+.portrait {padding-bottom: 120;}
+
+.light-text { color: white; } 
+
+
+.left   { text-align: left; }
+.center { text-align: center; }
+.right  { text-align: right; }
+
+.capped-width-wide { max-width: 1600px; margin: auto; }
+.capped-width { max-width: 1200px; margin: auto; }
+.capped-width-narrow { max-width: 1000px; margin: auto; }
+.capped-width-v-narrow { max-width: 800px; margin: auto; }
+
+.flex-flip-alternate:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+/* Typography */
+
+body{
+    font-family: 'Roboto', sans-serif; 
+    color: #333333;
+}
+
+
+h2, h3, h4, h5, h6{
+    font-family: 'Didot', Georgia, serif;
+    padding-bottom: 0.8rem;
+}
+
+h2 { 
+    font-size: 2.2rem; 
+    line-height: 1;
+}
+
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.4rem; }
+
+p{ 
+    line-height: 1.6rem;
+    font-weight: lighter;
+    color: black;
+    padding-bottom: 0.5rem;
+}
+
+h2:last-child, 
+h3:last-child, 
+h4:last-child, 
+h5:last-child, 
+h6:last-child, 
+p:last-child {
+	margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.bold{
+    font-size: 6vw;
+    letter-spacing: 0.2rem;
+    font-family: 'Didot', Georgia, serif;
+}
+
+.highlight {
+    font-size: 2rem;
+    font-family: 'Didot', Georgia, serif;
+}
+
+.fas {
+    color: #333333; 
+    margin-left: 0.5rem;
+}
+
+.fas:hover { 
+    cursor: pointer;
+    color: #9b9b81;
+ }
+
+
+ /* hamburger nav */
+ .hamburger-button {
+    cursor: pointer;
+    padding: 0 0.5rem;
+    display: inline-block;
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 0.5;
+    margin-top: -0.7rem;
+    position: fixed;
+    right: 1rem;
+    top: 2.5rem;
+    z-index: 2;
+}
+
+.hamburger-button.active {
+    color: white;
+}
+
+.mobile-menu {
+    display: none; 
+    background-color: #F9F7F3; 
+    padding: 5%;
+    position: fixed; 
+    top: 0;
+    left: 70%;
+    right: 0;
+    text-align: right;
+    z-index: 3;
+}
+
+.mobile-menu a {
+    text-decoration: none; 
+    color: inherit; 
+    padding: 1rem 5%;
+    display: block;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+/* images */ 
+.bg-image{
+    background-color: #F9F7F3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-position: 50% 50%; 
+    border-radius: 4%;
+}
+
+.square {
+    padding-bottom: 100%;
+}
+
+.landscape {
+    padding-bottom: 60%;
+}
+
+.bg-desk {
+    background-image: url('/images/l2r-desk.jpg');
+    background-position: 50% 65%;    
+}
+
+/* icon*/
+
+.tags {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* background position */
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
+
+
+/* Header + Footer */
+header {
+    padding: 2% 5%;
+}
+
+/* Links */
+
+header a {
+    text-decoration: none;
+    color: inherit; 
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit; 
+    display: inline-block;
+    padding: 1rem;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #9b9b81;
+}
+
+.button {
+    padding: 1rem 2rem; 
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 1rem;
+    text-decoration: none; 
+    color: #9b9b81; 
+    margin-top: 0.5rem;
+}
+
+.button:hover{
+    background-color: #9b9b81;
+    color: #F9F7F3;
+}
+
+/* Default Responsive Styles*/
+.mob-show {
+    display: none; 
+}
+
+/* ---------- MD Media Query (1024px) ---------- */ 
+
+@media (max-width: 1024px) {
+
+    h3 { font-size: 1.8rem; }
+    h4 { font-size: 1.4rem; }
+}
+
+/* ---------- SM Media Query (768px) ---------- */ 
+
+@media (max-width: 48em) {
+    .big-vertical {
+        transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+        font-size: 5vh;
+        display: block;
+        position: absolute;
+        white-space: nowrap;
+        top: 50%;
+        right: 50%;
+        }
+    .other { right: -20%; }
+
+    .mob-padded-0 {
+            padding: 0;
+        }
+    
+    h3 { font-size: 1.8rem; }
+
+    .flex-flip-xs {flex-direction: column-reverse;}
+
+    .mob-hide { display: none; }
+  	.mob-show { display: block; }
+}
+
+
+/* ---------- XS Media Query (576px) ---------- */ 
+
+@media (max-width: 36em) {
+
+    .xs-vertical { right: 30%; }
+
+    .xs-other { right: -33%; }
+
+}
+
+/* ---------- XXS Media Query (376px) ---------- */ 
+
+@media (max-width: 24em) {
+
+    .xxs-vertical { right: 13%; }
+
+}
