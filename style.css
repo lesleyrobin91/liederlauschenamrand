@@ -95,7 +95,8 @@ h3 { font-size: 1.5rem; }
 h4 { font-size: 1.4rem; }
 
 p{ 
-    line-height: 1.6rem;
+    font-size: 1.2rem; 
+    line-height: 1.8rem;
     font-weight: lighter;
     color: black;
     padding-bottom: 0.5rem;
@@ -112,9 +113,14 @@ p:last-child {
 }
 
 .bold{
-    font-size: 6vw;
+    font-size: 4vw;
     letter-spacing: 0.2rem;
     font-family: 'Didot', Georgia, serif;
+}
+
+.subheading {
+    font-size: 2vw;
+    letter-spacing: 0.2rem;
 }
 
 .highlight {
@@ -183,6 +189,13 @@ p:last-child {
     border-radius: 4%;
 }
 
+.bg-image-main{
+    background-color: #F9F7F3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
 .square {
     padding-bottom: 100%;
 }
@@ -234,22 +247,33 @@ footer a {
 
 a:hover{
     cursor: pointer;
-    color: #9b9b81;
+    color: #EF2751;
 }
 
 .button {
     padding: 1rem 2rem; 
     display: inline-block;
     border: 1px solid;
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     text-decoration: none; 
-    color: #9b9b81; 
+    color: #EF2751; 
     margin-top: 0.5rem;
+    text-transform: uppercase;
+}
+
+.button-nl{
+    color: #F9F7F3; 
+    background-color: #28258B;
 }
 
 .button:hover{
-    background-color: #9b9b81;
+    background-color: #EF2751;
     color: #F9F7F3;
+}
+
+.button-nl:hover{
+    background-color: #F9F7F3;
+    color: #28258B;
 }
 
 /* Default Responsive Styles*/
