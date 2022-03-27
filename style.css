@@ -99,7 +99,7 @@ p{
     line-height: 1.8rem;
     font-weight: lighter;
     color: black;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 h2:last-child, 
@@ -191,7 +191,12 @@ p:last-child {
 
 .logo {
     background-size: cover; 
-    max-height: 50%;
+    max-height: 5vh;
+}
+
+.logo-footer {
+    background-size: cover; 
+    max-height: 25vh;
 }
 
 .bg-image-main{
