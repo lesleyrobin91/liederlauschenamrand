@@ -12,30 +12,45 @@
             <div class="col-5_sm-3_xs-12-middle">
                 <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo"> </a>
             </div>
-            <nav class="col-7_sm-9-middle padded-0 right">
+            <nav class="col-7_sm-9-middle mob-hide padded-0 right">
                 <a href="/konzept"> Konzept </a>
                 <a href="/programm"> Programm </a>
                 <a href="/news"> News </a>
                 <a href="/anfahrt"> Anfahrt </a>
                 <a href="/tickets"> Tickets </a>
             </nav>
+
+            <div col-6 right>
+                <a class="hamburger-button mob-show"> &#9776; </a>
+            </div>
+
+            <div>
+                <nav class="mobile-menu">
+                    <a href="/konzept"> Konzept </a>
+                    <a href="/programm"> Programm </a>
+                    <a href="/news"> News </a>
+                    <a href="/anfahrt"> Anfahrt </a>
+                    <a href="/tickets"> Tickets </a>
+                </nav>
+            </div>
         </header >
 
         {{ content }}
 
 
         <!-- footer -->
-        <footer class="grid padded padded-b-0 bg-light" id="contact">
-            <div class="col-5-middle padded">
-                <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo-footer"> </a>
-            </div>
-            <div class="col-7-middle right padded">
-                <h3> Let's Connect. </h3>
+        <footer class="grid padded-1 padded-b-0 bg-dark" id="contact">
+            <div class="col-5-middle padded-1">
+                <h3> Folgt uns und feiert mit uns! </h3>
                 <nav> 
                     <a href="#"> <i class="fas fa-envelope"></i> </a>
                     <a href="#"> <i class="fab fa-instagram"></i> </a>
                     <a href="#"> <i class="fab fa-facebook-f"></i> </a>
                 </nav>
+                <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo-footer"> </a>
+            </div>
+            <div class="col-7-middle padded-1">
+                <div class="bg-image landscape"> </div>
             </div>
             <div class="col-12 center padded-t">
                 <p class="subtle"> Copyright 2022 <br> Design by <a href="blank:lesleyrudolph.com" class="padded-0"> L2R </a></p>

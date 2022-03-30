@@ -8,12 +8,92 @@ seo:
    keywords: >-
       lorem ipsum
    hide-from-google: true
+bands:
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+ - image: 
+   name: bandname
+workshops:
+ - title: Workshop 1
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+ - title: Workshop 2
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+ - title: Workshop 3
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+ - title: Workshop 4
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+ - title: Workshop 5
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
 ---
 <!-- Intro Banner -->
-<section class="grid padded mob-padded-0 bg-image-main  tall-60">
+<section class="grid padded bg-image-main bg-plant bg-overlay tall-60">
     <div class="col-12-bottom center padded-1">
-        <h1 class="bold editable">
-            PROGRAMM AM RAND
-        </h1>
+        <h1 class="bold editable"> PROGRAMM AM RAND </h1>
     </div>
+</section>
+
+<!-- Featured Acts -->
+<section class="grid-center-middle padded-1"> 
+    <h2 class="col-12-middle center padded-2"> Headliner </h2>
+    <div class="col-9 center">
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 1 </h3> </a> 
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 2 </h3> </a> 
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 3 </h3> </a> 
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 4 </h3> </a> 
+    </div>
+    <div class="col-9 center">
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 5 </h3> </a> 
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 6 </h3> </a> 
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 7 </h3> </a> 
+        <a href="#" class="col-2_sm-4 act"> <h3> Band 8 </h3> </a> 
+    </div>
+</section>
+
+
+<!-- Lineup -->
+<section class="grid-center-middle padded-1 bg-dark">
+    <div class="col-9_sm-12-middle center padded-2">
+        <h2> Lineup </h2>
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+    </div>
+    
+    <div class="grid gallery margin-b-2">
+        {% for item in page.bands %}
+        <div class="col-4_sm-6_xs-12 padded-2">
+            <div class="bg-image square"> {{ item.image }} </div>
+            <h3 class="center"> {{ item.name }} </h3>   
+        </div>
+        {% endfor %} 
+    </div>
+</section>
+
+<!-- Workshops -->
+<section class="grid-center-middle padded">
+    <div class="col-12 center padded-b-1">
+        <h2 class="editable"> Workshops am Rand </h2>
+    </div>
+
+    {% for item in page.workshops %}
+
+    <div class="col-4_md-6_sm-12 padded-2">
+        <h3> {{ item.title }} </h3>           
+        <p> {{ item.description }}</p>
+    </div>
+
+    {% endfor %}    
+
 </section>
