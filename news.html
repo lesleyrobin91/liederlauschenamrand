@@ -8,6 +8,10 @@ seo:
    keywords: >-
       lorem ipsum
    hide-from-google: true
+banner:
+ - column-size: col-12
+   aspect-ratio: tall-60
+   background_image: 
 faq:
  - topic: Was geschieht im Falle einer Absage oder Verschiebung?
    description: Müssen wir absagen, werden euch die Tickets natürlich erstattet. Auch wenn Ihr zum Beispiel an einem Ersatztermin nicht teilnehmen könnt, bekommt ihr eine Erstattung.
@@ -23,8 +27,15 @@ faq:
    description: Auf jeden Fall. Wir sind zwar kein explizites Kinderfest, im Herzen geht es darum entspannt gute Live Musik zu feiern. Aber das LiederLauschen ist wie man so schön sagt “familienfreundlich”. Es gibt ein Familienareal auf der Wiese, wo gebastelt, geschminkt und getobt werden kann. Das Stettiner Puppentheater Pleciuga wird uns wieder die Ehre geben und Vorstellungen für die Kleinen geben. Ansonsten bietet das Gelände viel Raum für eigenen Ideen.
 ---
 <!-- Intro Banner -->
-<section>
-    <div class="bg-image-main tall-60 editable landscape"> </div>
+<section class="grid">
+
+    {% for item in page.banner %}
+    <div class="{{item.column-size}}"> 
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
+        </div>
+    </div>
+    {% endfor %}
+
 </section>
 
 <section class="capped-width grid">
