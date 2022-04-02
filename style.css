@@ -192,29 +192,6 @@ p:last-child {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    background-position: 50% 50%; 
-}
-
-.logo {
-    background-size: cover; 
-    max-height: 5vh;
-}
-
-.logo-footer {
-    background-size: cover; 
-    max-height: 25vh;
-}
-
-.llar-titel{
-    background-size: cover; 
-    max-height: 15vh;
-}
-
-.bg-image-main{
-    background-color: #F9F7F3;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
 }
 
 .bg-plant {
@@ -234,6 +211,20 @@ p:last-child {
     padding-bottom: 60%;
 }
 
+.logo {
+    background-size: cover; 
+    max-height: 5vh;
+}
+
+.logo-footer {
+    background-size: cover; 
+    max-height: 25vh;
+}
+
+.llar-titel{
+    background-size: cover; 
+    max-height: 15vh;
+}
 
 .gallery [class*="col-"]  { padding: 0.5%;}
 
