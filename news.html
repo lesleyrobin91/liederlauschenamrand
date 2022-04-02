@@ -28,8 +28,8 @@ faq:
 </section>
 
 <section class="capped-width grid">
-    <div class="col-12">
-        <h1 class="bold padded-b"> FAQ </h1>
+    <div class="col-12 padded-1">
+        <h1 class="bold padded-b-1"> FAQ </h1>
         <h2> Viele Fragen - einige Antworten </h2>
         <p> Nach aktuellem Stand dürfen bis zu 100 Besucher Open Air Kultur genießen. Wir freuen uns deshalb auf ein kleines, feines Fest mit Euch und großartigen Künstlern. Neben der Vorfreude habt Ihr sicherlich einige organisatorische Fragen, die wir nachfolgend so gut wie es der aktuelle Planungsstand zulässt, beantworten wollen: </p>
     </div>
@@ -38,11 +38,11 @@ faq:
     <div class="col-9_md-8_xs-12 padded-1 editable">
 
         {% for item in page.faq %}
-            <h3 class="padded-1" id="{{ item.topic }}"> {{ item.topic }} </h3>
-            <p class="padded-1 padded-t-0"> {{ item.description }} </p> 
+            <h3 id="{{ item.topic }}"> {{ item.topic }} </h3>
+            <p class="padded-b"> {{ item.description }} </p> 
         {% endfor %}
 
-        <p class="padded-t"> Weitere Fragen rund um Organisatorisches werden wir hier sobald wie möglich ergänzen.Bis dahin euch allen eine gute Zeit! </p>
+        <p> Weitere Fragen rund um Organisatorisches werden wir hier sobald wie möglich ergänzen. Bis dahin euch allen eine gute Zeit! </p>
         <p> Euer LiederLauschen Team </p> 
     </div>
 
