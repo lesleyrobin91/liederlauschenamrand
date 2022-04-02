@@ -1,3 +1,4 @@
+// Hamburger nav
 $('.hamburger-button').click(function(){
     $('.mobile-menu').fadeToggle(100);
     $(this).toggleClass('active');
@@ -13,3 +14,4 @@ lightGallery(document.getElementById('lightgallery'), {
     download: false,
     speed: 500
   });
+

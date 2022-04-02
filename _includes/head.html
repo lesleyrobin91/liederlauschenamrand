@@ -55,6 +55,24 @@
 </script>
  -->
 
+ <!------------ Ticket System 
+ <script> 
+    ;var goOut = {init: function(callback){var s,d;d=document;s=d.createElement('script');s.src='https://partners.goout.net/framework/api.vue.js';d.body.appendChild(s);window.addEventListener('goApiReady', callback);}};
+
+goOut.init(function() {
+    var lang = goOut.currentLang();
+    var holder = goOut.createHolder();
+    jQuery('#goout-widget').append(holder);
+
+    if (location.pathname == "/tickets/") {
+        goOut.frame(holder, "https://goout.net/" + lang + "/tickets/liederlauschen-am-rand-2022-ein-polnisch-deutscher-oderbruch/yfcm/?lessContact=2847")
+    } else if (location.pathname == "/ticketspolnisch/") {
+        goOut.frame(holder, "https://goout.net/" + lang + "/bilety/liederlauschen-am-rand-2022-polsko-niemiecka-kotlina-freienwaldzka/coem/?lessContact=2847")
+    }
+});
+</script>
+----------------------------------->
+
 <!------------- External Stylesheets  ------------------------->
 
 <!-- Font Awesome -->

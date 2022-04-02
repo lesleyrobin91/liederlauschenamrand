@@ -39,6 +39,7 @@ html {
 
 .padded-0 { padding: 0; }
 .padded-b-0 { padding-bottom: 0; }
+.padded-t-0 { padding-top: 0; }
 .padded-b-1 { padding-bottom: 1rem; }
 .margin-b-0 { margin-bottom: 0; }
 
@@ -192,7 +193,6 @@ p:last-child {
     background-repeat: no-repeat;
     background-position: center; 
     background-position: 50% 50%; 
-    border-radius: 4%;
 }
 
 .logo {
@@ -205,11 +205,25 @@ p:last-child {
     max-height: 25vh;
 }
 
+.llar-titel{
+    background-size: cover; 
+    max-height: 15vh;
+}
+
 .bg-image-main{
     background-color: #F9F7F3;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
+}
+
+.bg-plant {
+    background-image: url('/images/plants.jpg');
+    background-position: 50% 65%;    
+}
+
+.bg-llar{
+    background-image: url('/images/LaR2022_Titel.png');
 }
 
 .square {
@@ -220,10 +234,6 @@ p:last-child {
     padding-bottom: 60%;
 }
 
-.bg-plant {
-    background-image: url('/images/plants.jpg');
-    background-position: 50% 65%;    
-}
 
 .gallery [class*="col-"]  { padding: 0.5%;}
 
@@ -277,6 +287,14 @@ header a {
     display: inline-block;
     padding: 0 1rem;
 }
+
+.faq-nav a{
+    text-decoration: none;
+    color: inherit; 
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+  }
 
 .act{
     display: inline-block;

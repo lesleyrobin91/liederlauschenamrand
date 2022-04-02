@@ -88,17 +88,12 @@ workshops:
   <div class="col-9">
     <h2 class="center padded-2"> Headliner </h2>
     
-      {% for item in page.featured limit:3 %}
-      <div class="col-2_sm-4 center act">
+      {% for item in page.featured %}
+      <div class="col-4 center act">
         <a href="#"> <h3> {{ item.bandname }} </h3> </a> 
       </div>
       {% endfor %}
 
-      {% for item in page.featured offset:3 %}
-      <div class="col-2_sm-4 center act">
-        <a href="#"> <h3> {{ item.bandname }} </h3> </a> 
-      </div>
-      {% endfor %}
   </div>
     
 </section>
