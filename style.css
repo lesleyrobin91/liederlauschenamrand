@@ -57,6 +57,7 @@ html {
 
 .landscape {padding-bottom: 60%;}
 .portrait {padding-bottom: 120;}
+.header {padding-bottom: 30%;}
 
 .light-text { color: white; } 
 
@@ -289,7 +290,7 @@ header a {
 .act{
     display: inline-block;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     color: inherit;
 }
 

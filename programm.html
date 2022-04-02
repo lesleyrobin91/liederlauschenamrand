@@ -84,13 +84,13 @@ workshops:
 </section>
 
 <!-- Featured Acts -->
-<section class="grid-center-middle padded-1"> 
-  <div class="col-9">
-    <h2 class="center padded-2"> Headliner </h2>
+<section class="grid center padded-1"> 
+  <div class="capped-width-narrow">
+    <h2 class="padded-2"> Headliner </h2>
     
       {% for item in page.featured %}
-      <div class="col-4 center act">
-        <a href="#"> <h3> {{ item.bandname }} </h3> </a> 
+      <div class="col-4 act">
+        <h3> <a href="#" class="act"> {{ item.bandname }} </a> </h3>
       </div>
       {% endfor %}
 
