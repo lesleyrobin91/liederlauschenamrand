@@ -8,6 +8,10 @@ seo:
    keywords: >-
       lorem ipsum
    hide-from-google: true
+banner:
+ - column-size: col-12
+   aspect-ratio: tall-60
+   background_image: /images/plants.jpg
 gallery:
   - column-size: col-3_sm-12
     aspect-ratio: square
@@ -44,20 +48,24 @@ gallery-two:
     type: cat
 ---
 <!-- Intro Banner -->
-<section class="grid padded mob-padded-0 bg-image-main  tall-60">
-    <div class="col-12-bottom center padded-1">
-        <h1 class="bold editable">
-            KONZEPT AM RAND
-        </h1>
+<section class="grid">
+
+    {% for item in page.banner %}
+    <div class="{{item.column-size}}"> 
+        <div class="bg-image {{item.aspect-ratio}} bg-overlay" style="background-image: url('{{item.background_image}}');"> 
+        </div>
     </div>
-</section>
+    {% endfor %}
+ 
+ </section>
 
 
 <!--------------- LLAR Section --------------->
 <section class="grid-center-middle padded-1 editable">
 
     <div class="col-8 center">
-        <h2 class="padded-2"> Stadt – Land – Heimat </h2>
+        <h1 class="bold editable"> KONZEPT AM RAND </h1>
+        <h2 class="padded-1"> Stadt – Land – Heimat </h2>
         <p> Das ist für uns der Wunsch nach Vielfalt und Vertrautheit. </p>
         <p> Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen Reichtum des Landes zusammenbringen und nachhaltig verbinden. Wir sind ein familienfreundliches – wir sind ein familiäres Festival. Wir limitieren uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur und uns selbst behutsam umgehen. </p>
         <p> Naturschutz und Nachhaltigkeit sollen grenzenlos gedacht werden. Andernfalls kann es nicht funktionieren. Nur wenn wir gemeinsam über alle Grenzen hinaus verstehen, dass wir mit und nicht gegen die Natur leben können, werden wir in die richtige Richtung gehen. Dass das auch noch voller Freude und ohne Entbehrungen möglich ist, wollen wir mit unserem Festival zeigen und feiern. </p>
@@ -70,7 +78,7 @@ gallery-two:
 
 
 <!-- Popup Gallery  1 -->
-<section class="center padded capped-width-narrow">
+<section class="center padded-1 capped-width-narrow">
 
     <div class="gallery grid">
 
@@ -90,7 +98,7 @@ gallery-two:
 <section class="grid-center-middle padded-1 editable">
 
     <div class="col-8 center">
-        <h2 class="padded-2"> Hintergrund </h2>
+        <h2 class="padded-1"> Hintergrund </h2>
         <p> Seit 12 Jahren veranstaltet der Kulturverein Braumeister das LiederLauschen Festival auf dem Helmholtzplatz in Berlin. An 3 Tagen werden unter freiem Himmel hochkarätige MusikerInnen präsentiert, die ohne große Labels auskommen. Das Ganze seit Anbeginn als Umsonst & Draußen Festival zelebriert, bringt das LiederLauschen die so unterschiedlichen Nutzergruppen des Helmholtzplatzes über die Musik zusammen. Das Schicksal hat es so gewollt, dass die Initiatoren des Festivals ihren Weg in den Oderbruch zum Theater am Rand fanden. Es entstand die Idee, das LiederLauschen zum Theater zu bringen, gewissermaßen also das Zentrum an den Rand zu holen. </p>
         <p> Daraus ist 2018 das LiederLauschen Labor entstanden (ein experimentelles biografisches Musikformat mit 7 unterschiedlichen Künstlern des Festivals) mit je einer Aufführung im Theater am Rand und dem Maschinenhaus in Berlin. Das Brückenbauen fand somit seinen Anfang. </p>
         <p> 2019 wagten die LiederLauscher den kulturellen Oderbruch und veranstalteten das erste LiederLauschen am Rand. </p>
@@ -110,15 +118,14 @@ gallery-two:
 <section class="grid-center-middle padded-1 editable">
 
     <div class="col-8 center">
-        <h2 class="padded-2"> Natur am Rand </h2>
-        <h3> Nützling sein </h3>
+        <h2 class="padded-1"> Natur am Rand </h2>
         <p> Das Oderbruch gilt als eines der schönsten Landschaften im östlichen Deutschland. Eine Perle der Natur, die vor etwas mehr als 250 Jahren noch wild ihre Oderarme durch die Niederungen schlängelte. Die Eindeichung und Trockenlegung der Sumpflandschaft unter König Friedrich II. machte aus sumpfiger Wildnis eines der fruchtbarsten Ackerbaugebiete und eine neue preußische Provinz, die sich aufgrund ihres Fischreichtums und wertvollen Ackerbodens zur Kornkammer Preußens und zur Speisekammer Berlins entwickelte. Den zurückgezogenen Charme hat sich das Oderbruch bis heute bewahren können und ist damit ein idealer Wohnraum für eine artenreiche Tierwelt. </p>
         <p> Inmitten des Oderbruchs, in dem 24 Seelen Dorf Zollbrücke, befindet sich das Theater am Rand, das aussieht wie ein halb geöffnetes Indianerzelt aus Holz. Es liegt malerisch zwischen Feldern und Bäumen. Auf den Wiesen spazieren Störche umher, die Blicke schweifen über grüne Äcker. </p>
     </div>
 </section>
     
     <!-- Gallery 2 -->
-    <section class="center padded capped-width-narrow">
+    <section class="center padded-1 capped-width-narrow">
 
         <div class="gallery grid">
     
@@ -138,6 +145,7 @@ gallery-two:
 <section class="grid-center-middle padded-1 editable">
 
     <div class="col-8 center">
+        <h3> Nützling sein </h3>
         <p> Wunderschön aber hier ein Festival feiern? Wie lässt sich unsere Feierkultur mit den Themen Arten- und Naturschutz vereinbaren? </p>
         <p> Das Thema Umweltschutz ist längst im Mainstream angekommen. Dabei wird der Mensch vor allem anhand seiner negativen Einflüsse auf die Natur beschrieben. Welchen Effekt hat jedoch dieses Selbstbild auf uns als Akteure. Können wir statt Schädling zu sein nicht auch nützlich agieren für unsere Umwelt? Diese Fragen haben uns lange beschäftigt und tun es immer noch.</p>
         <p> Mit dem LiederLauschen am Rand wollen wir ein grenzüberschreitendes Festival veranstalten, das Menschen verschiedener Herkunft und Generation zusammenbringt und zeigt wie wir als kreative Wesen unsere Fähigkeiten nutzen, positiv für Menschen  und Umwelt zu handeln.</p>

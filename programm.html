@@ -6,6 +6,10 @@ seo:
    social_image:
    keywords: lorem ipsum
    hide-from-google: true
+banner:
+ - column-size: col-12
+   aspect-ratio: tall-60
+   background_image: /images/plants.jpg
 featured:
  - bandname: Beispiel-Band
  - bandname: Beispiel-Band
@@ -16,80 +20,63 @@ featured:
  - bandname: Beispiel-Band
  - bandname: Beispiel-Band
 bands:
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
-   -
-      image:
-      name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
+ - image:
+   name: bandname
 workshops:
-   -
-      title: Workshop 1
-      description: >-
-         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-         sed diam voluptua.
-   -
-      title: Workshop 2
-      description: >-
-         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-         sed diam voluptua.
-   -
-      title: Workshop 3
-      description: >-
-         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-         sed diam voluptua.
-   -
-      title: Workshop 4
-      description: >-
-         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-         sed diam voluptua.
-   -
-      title: Workshop 5
-      description: >-
-         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-         sed diam voluptua.
+ - title: Workshop 1
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ - title: Workshop 2
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ - title: Workshop 3
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ - title: Workshop 4
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ - title: Workshop 5
+   description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 ---
-
 <!-- Intro Banner -->
-<section class="grid padded bg-image-main bg-plant bg-overlay tall-60">
-    <div class="col-12-bottom center padded-1">
-        <h1 class="bold editable"> PROGRAMM AM RAND </h1>
-    </div>
+<section class="grid">
+
+   {% for item in page.banner %}
+   <div class="{{item.column-size}}"> 
+       <div class="bg-image {{item.aspect-ratio}} bg-overlay" style="background-image: url('{{item.background_image}}');"> 
+       </div>
+   </div>
+   {% endfor %}
+
 </section>
 
 <!-- Featured Acts -->
-<section class="grid center padded-1"> 
-  <div class="capped-width-narrow">
-    <h2 class="padded-2"> Headliner </h2>
+<section class="grid capped-width-narrow"> 
+
+   <div class="center padded-1">
+      <h1 class="bold editable padded-b-1"> PROGRAMM AM RAND </h1>
+      <h2 class="padded-2"> Headliner </h2>
     
       {% for item in page.featured %}
-      <div class="col-4 act">
+      <div class="act">
         <h3> <a href="#" class="act"> {{ item.bandname }} </a> </h3>
       </div>
       {% endfor %}
@@ -106,7 +93,7 @@ workshops:
         <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
     </div>
     
-    <div class="grid gallery margin-b-2">
+    <div class="grid gallery margin-b-2 capped-width-narrow">
         {% for item in page.bands %}
         <div class="col-4_sm-6_xs-12 padded-2">
             <div class="bg-image square"> {{ item.image }} </div>

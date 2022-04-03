@@ -8,17 +8,25 @@ seo:
    keywords: >-
       lorem ipsum
    hide-from-google: true
+banner:
+ - column-size: col-12
+   aspect-ratio: tall-60
+   background_image: /images/plants.jpg
 ---
 <!-- Intro Banner -->
-<section class="grid padded bg-image-main  tall-60">
-    <div class="col-12-bottom center padded-1">
-        <h1 class="bold editable">
-            TICKETS FÜR'N RAND
-        </h1>
+<section class="grid">
+
+    {% for item in page.banner %}
+    <div class="{{item.column-size}}"> 
+        <div class="bg-image {{item.aspect-ratio}} bg-overlay" style="background-image: url('{{item.background_image}}');"> 
+        </div>
     </div>
-</section>
+    {% endfor %}
+ 
+ </section>
 
 <!-- Ticketsystem-->
-<section class="padded">
+<section class="padded-1 center">
+    <h1 class="bold editable"> TICKETS FÜR'N RAND </h1>
     <div id="goout-widget"></div> 
 </section>
