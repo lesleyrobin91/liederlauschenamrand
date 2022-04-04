@@ -100,7 +100,7 @@ h4 { font-size: 1.4rem; }
 p{ 
     font-size: 1.2rem; 
     line-height: 1.8rem;
-    font-weight: lighter;
+    font-weight: 300;
     color: black;
     padding-bottom: 1rem;
 }
@@ -353,6 +353,27 @@ a:hover,
     background-color: #FFFFFF;
     color: #28258B;
     border: 1px solid #28258B;
+}
+
+/* Mailchimp Form Styles */
+.asterisk {
+    color: red;
+}
+
+form input, form textarea{
+    margin: 1% 0;
+    padding: 0.8rem;
+    border: 1px solid #28258B;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background-color: white;
+}
+
+form label{
+    padding: 0.8rem;
+    display: inline-block;
+    font-family: inherit;
 }
 
 /* Default Responsive Styles*/
