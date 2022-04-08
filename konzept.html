@@ -10,17 +10,6 @@ banner:
   - column-size: col-12
     aspect-ratio: tall-60
     background_image: /images/plants.jpg
-concept:
-  - title: Stadt – Land – Heimat
-    description: >-
-      Das ist für uns der Wunsch nach Vielfalt und Vertrautheit. 
-
-
-      Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen
-      Reichtum des Landes zusammenbringen und nachhaltig verbinden. Wir sind ein
-      familienfreundliches – wir sind ein familiäres Festival. Wir limitieren
-      uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur
-      und uns selbst behutsam umgehen.
 gallery:
   - column-size: col-3_sm-12
     aspect-ratio: square
@@ -74,16 +63,14 @@ gallery-two:
 <section class="grid-center-middle padded-1 editable">
 
     <div class="col-8 center">
-        <h1 class="bold editable">
-            KONZEPT AM RAND
-        </h1>
-
-        {% for item in page.concept %}
-
-        <h2 class="padded-1 editable">
-            Stadt &ndash; Land &ndash; Heimat
-        </h2>
-        <p> {{ item.description }} </p>
+        <h1 class="bold editable"> KONZEPT AM RAND </h1>
+        <h2 class="padded-1 editable"> Stadt – Land – Heimat </h2>
+        <p class="editable"> Das ist für uns der Wunsch nach Vielfalt und Vertrautheit. </p>
+        <p class="editable"> Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen
+            Reichtum des Landes zusammenbringen und nachhaltig verbinden. Wir sind ein
+            familienfreundliches – wir sind ein familiäres Festival. Wir limitieren
+            uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur
+            und uns selbst behutsam umgehen. </p>
         <p class="editable">
             Naturschutz und Nachhaltigkeit sollen grenzenlos gedacht werden. Andernfalls kann es nicht funktionieren. Nur wenn wir gemeinsam &uuml;ber alle Grenzen hinaus verstehen, dass wir mit und nicht gegen die Natur leben k&ouml;nnen, werden wir in die richtige Richtung gehen. Dass das auch noch voller Freude und ohne Entbehrungen m&ouml;glich ist, wollen wir mit unserem Festival zeigen und feiern.
         </p>
@@ -97,7 +84,6 @@ gallery-two:
             Wir freuen uns auf Euch &ndash; seid herzlich willkommen beim Liederlauschen am Rand!
         </p>
     </div>    
-     {% endfor %}
 </section>
 
 
