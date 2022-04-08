@@ -10,40 +10,43 @@ banner:
  - column-size: col-12
    aspect-ratio: tall-60
    background_image: /images/plants.jpg
-featured:
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
- - bandname: Beispiel-Band
 bands:
- - image:
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: freitag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: freitag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: freitag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: samstag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: samstag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: sonntag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: sonntag
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: 
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: 
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: 
+ - background_image: /images/plants.jpg
    name: bandname
- - image:
+   type: 
+ - background_image: /images/plants.jpg
    name: bandname
+   type: 
 workshops:
  - title: Workshop 1
    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -68,11 +71,10 @@ workshops:
 
 </section>
 
-<!-- Featured Acts -->
+<!-- Headliner
 <section class="grid capped-width-narrow"> 
 
-   <div class="center padded-1">
-      <h1 class="bold editable padded-b-1"> PROGRAMM AM RAND </h1>
+  <div class="center padded-1">
       <h2 class="padded-2"> Headliner </h2>
     
       {% for item in page.featured %}
@@ -82,25 +84,35 @@ workshops:
       {% endfor %}
 
   </div>
-    
-</section>
+</section> -->
 
 
 <!-- Lineup -->
-<section class="grid-center-middle padded-1 bg-dark">
-    <div class="col-9_sm-12-middle center padded-2 editable">
-        <h2> Lineup </h2>
-        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
-    </div>
+<section class="grid-center-middle padded-1">
+  <h1 class="bold editable padded-b-1"> PROGRAMM AM RAND </h1>
     
-    <div class="grid gallery margin-b-2 capped-width-narrow">
-        {% for item in page.bands %}
-        <div class="col-4_sm-6_xs-12 padded-2">
-            <div class="bg-image square"> {{ item.image }} </div>
-            <h3 class="center"> {{ item.name }} </h3>   
-        </div>
-        {% endfor %} 
-    </div>
+  <div class="col-9_sm-12-middle center padded-1 editable">
+      <h2> Lineup </h2>
+      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+  </div>
+
+  <div class="portfolio-filter col-12 center padded-b-1" id="portfolio-filter">
+    <span>Alle Tage</span> /
+    <span>Freitag</span> /
+    <span>Samstag</span> /
+    <span>Sonntag</span> 
+  </div>
+
+  <div class="grid-center capped-width-narrow margin-b-2 filterable-gallery" id="filterable-gallery">
+        
+    {% for item in page.bands %}
+      <div class="col-4_sm-6_xs-12 padded-2 {{ item.type }} gallery-item">
+          <div class="bg-image" style="background-image: url('{{item.background_image}}');"> </div>
+          <h3 class="center"> {{ item.name }} </h3>   
+      </div>
+    {% endfor %} 
+
+  </div>
 </section>
 
 <!-- Workshops -->
