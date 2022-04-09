@@ -48,3 +48,9 @@ $('#portfolio-filter span').click(function(){
   });
 });
 
+//click-show
+$('.show-hide').click(function(){
+
+  $('.clickshow').fadeToggle();
+
+});

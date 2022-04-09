@@ -269,6 +269,7 @@ p:last-child {
 
 .hidden { display: none; }
 
+.hide { display: none;}
 
 /* Filter navigation */
 .portfolio-filter span {
