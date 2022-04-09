@@ -388,6 +388,8 @@ a:hover,
     border: 1px solid #28258B;
 }
 
+.border { border: 2px #F9F7F3; }
+
 /* Mailchimp Form Styles */
 .asterisk {
     color: red;
