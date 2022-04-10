@@ -7,7 +7,8 @@ seo:
   keywords: lorem ipsum
   hide-from-google: true
 banner:
-  - column-size: col-12
+  - overlay: bg-overlay
+    column-size: col-12
     aspect-ratio: tall-60
     background_image: /images/plants.jpg
 gallery:
@@ -51,7 +52,7 @@ gallery-two:
 
     {% for item in page.banner %}
     <div class="{{item.column-size}}"> 
-        <div class="bg-image {{item.aspect-ratio}} bg-overlay" style="background-image: url('{{item.background_image}}');"> 
+        <div class="bg-image {{item.aspect-ratio}} {{ item.overlay }}" style="background-image: url('{{item.background_image}}');"> 
         </div>
     </div>
     {% endfor %}

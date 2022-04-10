@@ -9,7 +9,8 @@ seo:
       lorem ipsum
    hide-from-google: true
 banner:
-  - background_image: /images/plants.jpg
+  - overlay: bg-overlay
+    background_image: /images/plants.jpg
 gallery:
   - column-size: col-4_sm-12
     aspect-ratio: square
@@ -33,7 +34,7 @@ gallery:
 <!-- Intro Banner -->
 {% for item in page.banner %}
 
-<section class="grid padded bg-image bg-overlay tall-80" style="background-image: url('{{item.background_image}}');">
+<section class="grid padded bg-image {{ item.overlay }} tall-80" style="background-image: url('{{item.background_image}}');">
 
 {% endfor %}
     <div class="col-12-middle center padded-1">

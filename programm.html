@@ -7,7 +7,7 @@ seo:
    keywords: lorem ipsum
    hide-from-google: true
 banner:
-   -
+   -  overlay: bg-overlay
       column-size: col-12
       aspect-ratio: tall-60
       background_image: /images/Programm.jpg
@@ -185,7 +185,7 @@ workshops:
 
    {% for item in page.banner %}
    <div class="{{item.column-size}}"> 
-       <div class="bg-image {{item.aspect-ratio}} bg-overlay" style="background-image: url('{{item.background_image}}');"> 
+       <div class="bg-image {{item.aspect-ratio}} {{ item.overlay }}" style="background-image: url('{{item.background_image}}');"> 
        </div>
    </div>
    {% endfor %}
