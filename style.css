@@ -456,12 +456,23 @@ form label{
             padding: 0;
         }
     
-    h3 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
 
     .flex-flip-xs {flex-direction: column-reverse;}
 
     .mob-hide { display: none; }
   	.mob-show { display: block; }
+    
+    h2 { font-size: 2rem;}
+
+    p {
+        font-size: 0.9rem; 
+        line-height: 1.3rem; 
+    }
+    .mob-button { min-width: 30vw;}
+    .mob-footer { font-size: 0.9rem; }
+    .mob-center { text-align: center; }
+    .mob-padded { padding: 0.5rem 2rem; }
 }
 
 
