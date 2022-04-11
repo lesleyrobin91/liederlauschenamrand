@@ -72,6 +72,7 @@ bands:
       name: Sunday Morning Orchestra
       type: samstag
       tag: sunday-morning-orchestra
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -81,6 +82,7 @@ bands:
       name: Duxius
       type: samstag
       tag: duxius
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -90,6 +92,7 @@ bands:
       name: Animal Garden
       type: samstag
       tag: animal-garden
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -99,6 +102,7 @@ bands:
       name: Francis Tuan & Band
       type: samstag
       tag: francis-tuan-band
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -108,6 +112,7 @@ bands:
       name: Scotch&Water
       type: samstag
       tag: scotch-water
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -117,6 +122,7 @@ bands:
       name: The Rockin Lafayettes
       type: samstag
       tag: the-rockin-lafayettes
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -126,6 +132,7 @@ bands:
       name: Polnischer Chor Stettin
       type: sonntag
       tag: polnischer-chor-stettin
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -135,6 +142,7 @@ bands:
       name: Lou&Brio
       type: sonntag
       tag: lou-brio
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -144,6 +152,7 @@ bands:
       name: Córy
       type: sonntag
       tag: cory
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -153,6 +162,7 @@ bands:
       name: Drückerkolonne
       type: sonntag
       tag: drückerkolonne
+      url: #
 workshops:
    -
       title: Workshop 1
@@ -184,6 +194,19 @@ workshops:
          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
          sed diam voluptua.
+gallery:
+ - column-size: col-3_sm-12
+   aspect-ratio: square
+   background_image: /images/plants.jpg
+ - column-size: col-3_sm-12
+   aspect-ratio: square
+   background_image: /images/plants.jpg
+ - column-size: col-3_sm-12
+   aspect-ratio: square
+   background_image: /images/plants.jpg
+ - column-size: col-3_sm-12
+   aspect-ratio: square
+   background_image: /images/plants.jpg
 ---
 
 <!-- Intro Banner -->
@@ -234,7 +257,7 @@ workshops:
         
     {% for item in page.bands %}
       <div class="col-4_sm-6_xs-12 padded-2 {{ item.type }} gallery-item">
-         <a href="{{ item.url }}">
+         <a href="{{ item.url }}" target="_blank">
             <div class="bg-image" style="background-image: url('{{item.background_image}}');"> 
                <div class="overlay"> 
                   <p class="center"> {{ item.description }} </p> 
@@ -249,7 +272,7 @@ workshops:
 </section>
 
 <!-- Workshops -->
-<section class="grid-center-middle padded">
+<section class="grid-center-middle padded padded-b-0">
     <div class="col-12 center padded-b-1">
         <h2 class="editable"> Workshops am Rand </h2>
     </div>
@@ -263,4 +286,21 @@ workshops:
 
     {% endfor %}    
 
+</section>
+
+<!-- Popup Gallery -->
+<section class="center padded-1 capped-width-narrow">
+
+   <div class="gallery grid" id="lightgallery">
+
+       {% for item in page.gallery %}
+           
+       <a class="{{item.column-size}}" href="{{item.background_image}}"> 
+           <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
+           </div>
+       </a>
+       
+       {% endfor %}
+
+   </div>
 </section>
