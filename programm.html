@@ -22,6 +22,7 @@ bands:
       name: Anna Haus Trio
       type: freitag
       tag: anna-haus-trio
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -31,6 +32,7 @@ bands:
       name: Melanie Haupt
       type: freitag
       tag: melanie-haupt
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -40,6 +42,7 @@ bands:
       name: Die Couchies
       type: freitag
       tag: die-couchies
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -49,6 +52,7 @@ bands:
       name: Ina WEST
       type: freitag
       tag: ina-west
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -58,6 +62,7 @@ bands:
       name: Paulina Miu Crossing Distance - Wandering Voice
       type: samstag
       tag: paulina-miu-crossing-distance-wandering-voice
+      url: #
    -
       description: >-
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsum
@@ -228,11 +233,15 @@ workshops:
   <div class="grid-center margin-b-2 filterable-gallery" id="filterable-gallery">
         
     {% for item in page.bands %}
-      <div class="col-4_sm-6_xs-12 padded-2 {{ item.type }} gallery-item show-hide">
-          <div class="bg-image" style="background-image: url('{{item.background_image}}');"> 
-            <p class="center hide clickshow"> {{ item.description }} </p> 
-         </div>
-          <h3 class="center {{ item.tag }}"> {{ item.name }} </h3>   
+      <div class="col-4_sm-6_xs-12 padded-2 {{ item.type }} gallery-item">
+         <a href="{{ item.url }}">
+            <div class="bg-image" style="background-image: url('{{item.background_image}}');"> 
+               <div class="overlay"> 
+                  <p class="center"> {{ item.description }} </p> 
+               </div>
+            </div>
+            <h3 class="center {{ item.tag }}"> {{ item.name }} </h3>   
+         </a>
       </div>
     {% endfor %} 
 

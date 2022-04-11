@@ -255,10 +255,6 @@ p:last-child {
 
 .gallery [class*="col-"]  { padding: 0.5%;}
 
-.filterable-gallery .bg-image {
-    padding-bottom: 100%;
-}
-
 .filterable-gallery {
     padding: 1rem;
 }
@@ -270,6 +266,26 @@ p:last-child {
 .hidden { display: none; }
 
 .hide { display: none;}
+
+.filterable-gallery .overlay { 
+    opacity: 0;
+    transition: 0.5s;
+    background-color: rgba(255,255,255,0.5);
+    min-height: 19vw; 
+    display: flex;
+    align-items: flex-end;
+}
+
+.filterable-gallery .gallery-item:hover p { opacity: 1; }
+
+.filterable-gallery .gallery-item:hover .overlay { 
+    opacity: 1; 
+}
+
+.filterable-gallery a {
+    color: inherit;
+    text-decoration: none;
+}
 
 /* Filter navigation */
 .portfolio-filter span {
