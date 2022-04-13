@@ -473,7 +473,8 @@ form label{
     .mob-footer { font-size: 0.9rem; }
     .mob-center { text-align: center; }
     .mob-padded { padding: 0.5rem 2rem; }
-    .mob-height {  min-height: 70vw; }
+    
+    #mob-height {  min-height: 70vw; }
 }
 
 
