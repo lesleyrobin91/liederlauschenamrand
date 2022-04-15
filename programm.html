@@ -200,9 +200,9 @@ gallery:
 
 <!-- Lineup -->
 <section class="capped-width-narrow padded-1">
-  <h1 class="bold padded-b-1 center"> PROGRAMM AM RAND </h1>
+   {% for item in page.lineup %}
+   <h1 class="bold padded-b-1 center"> {{ item.heading }} </h1>
 
-  {% for item in page.lineup %}
   <div class="center padded-1 editable">
       <h2> {{ item.title }} </h2>
       <p> {{ item.description }} </p>
