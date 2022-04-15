@@ -13,9 +13,9 @@ banner:
       aspect-ratio: tall-60
       background_image: /images/Programm.jpg
 lineup: 
-   - heading: PROGRAMM AM RAND
-   - title: Lineup
-     description: lorem
+  - heading: PROGRAMM AM RAND
+    title: Lineup
+    description: lorem
 bands:
    -
       description: 
@@ -184,6 +184,7 @@ gallery:
 
 </section>
 
+
 <!-- Headliner
 <section class="grid capped-width-narrow"> 
 
@@ -195,16 +196,13 @@ gallery:
         <h3> <a href="#" class="act"> {{ item.bandname }} </a> </h3>
       </div>
       {% endfor %}
-
-  
- -->
-
+-->
 
 <!-- Lineup -->
 <section class="capped-width-narrow padded-1">
-   {% for item in page.lineup %}
-  <h1 class="bold editable padded-b-1 center"> {{ item.heading }} </h1>
-    
+  <h1 class="bold padded-b-1 center"> PROGRAMM AM RAND </h1>
+
+  {% for item in page.lineup %}
   <div class="center padded-1 editable">
       <h2> {{ item.title }} </h2>
       <p> {{ item.description }} </p>
