@@ -12,6 +12,10 @@ banner:
       column-size: col-12
       aspect-ratio: tall-60
       background_image: /images/Info.jpg
+intro: 
+  - headline: FAQ
+    title: Viele Fragen - einige Antworten
+    description: Nach aktuellem Stand dürfen bis zu 100 Besucher Open Air Kultur genießen. Wir freuen uns deshalb auf ein kleines, feines Fest mit Euch und großartigen Künstlern. Neben der Vorfreude habt Ihr sicherlich einige organisatorische Fragen, die wir nachfolgend so gut wie es der aktuelle Planungsstand zulässt, beantworten wollen.
 faq:
    -
       topic: Was geschieht im Falle einer Absage oder Verschiebung?
@@ -76,11 +80,13 @@ faq:
 
 <!-- Intro Text -->
 <section class="capped-width grid">
+    {% for item in page.intro %}
     <div class="col-12 padded-1">
-        <h1 class="bold padded-b-1 center"> FAQ </h1>
-        <h2 class="center"> Viele Fragen - einige Antworten </h2>
-        <p class="center"> Nach aktuellem Stand dürfen bis zu 100 Besucher Open Air Kultur genießen. Wir freuen uns deshalb auf ein kleines, feines Fest mit Euch und großartigen Künstlern. Neben der Vorfreude habt Ihr sicherlich einige organisatorische Fragen, die wir nachfolgend so gut wie es der aktuelle Planungsstand zulässt, beantworten wollen: </p>
+        <h1 class="bold padded-b-1 center"> {{ item.headline }} </h1>
+        <h2 class="center"> {{ item.title }} </h2>
+        <p class="center"> {{ item.description }} </p>
     </div>
+    {% endfor %}
 
 <!-- FAQ Intro-->
     <div class="col-9_md-8_xs-12 padded-1 editable">
