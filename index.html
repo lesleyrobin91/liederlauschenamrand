@@ -9,6 +9,9 @@ seo:
 banner:
   - overlay:
     background_image: /images/home.jpg
+llar: 
+  - title: Liederlauschen am Rand
+    text: Zum 4. Mal in Folge feiern wir mit Euch im geschichtsträchtigen Oderbruch 3 Tage lang die polnisch-deutsche Nachbarschaft. Für alle Musik- und Natur-Liebhaber, Familien und Fahrradfreunde! Ein musikalisches Crossover von Elektro, Funk, Reggae, Soul und Folk über Jazz, HipHop, Punk, Rock oder Klassik. Vielfältige Workshops und Aktionen. Kulinarische Gaumenfreuden. Fantastische Sonnenaufgänge und Sonnenuntergänge. Wir feiern das Liederlauschen am Rand immer am Anfang der Sommerferien. Startet doch Euren Ferienbeginn mit dem Fahrrad in der Schorfheide bis zum wunderschönen Oderbruch und feiert als Höhepunkt mit uns gemeinsam das Liederlauschen am Rand, direkt an der Oder!
 programm:
   - background_image: /images/home_programm.jpg
 natur:
@@ -62,11 +65,14 @@ gallery:
 <!--------------- LLAR Section --------------->
 <section class="grid-center-middle padded-1 tall-60 editable">
     <div class="col-9_sm-12 center">
-        <h2 class="padded-2">Liederlauschen am Rand</h2>
-        <p>Zum 4. Mal in Folge feiern wir mit Euch im geschichtstr&auml;chtigen Oderbruch 3 Tage lang die polnisch-deutsche Nachbarschaft. F&uuml;r alle Musik- und Natur-Liebhaber, Familien und Fahrradfreunde!</p>
-        <p>Ein musikalisches Crossover von Elektro, Funk, Reggae, Soul und Folk &uuml;ber Jazz, HipHop, Punk, Rock oder Klassik.</p>
-        <p>Vielf&auml;ltige Workshops und Aktionen. Kulinarische Gaumenfreuden. Fantastische Sonnenaufg&auml;nge und Sonnenunterg&auml;nge.&nbsp;</p>
-        <p>Wir feiern das Liederlauschen am Rand immer am Anfang der Sommerferien. Startet doch Euren Ferienbeginn mit dem Fahrrad in der Schorfheide bis zum wundersch&ouml;nen Oderbruch und feiert als H&ouml;hepunkt mit uns gemeinsam das Liederlauschen am Rand, direkt an der Oder!</p>
+
+      {% for item in page.llar%}
+
+        <h2 class="padded-2">{{ item.title }}</h2>
+        <p> {{item.text}} </p>
+
+      {% endfor %}
+
         <a class="button button-light" href="/idee">Weiterlesen</a>
     </div>
 </section>
