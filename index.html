@@ -9,6 +9,10 @@ seo:
 banner:
   - overlay:
     background_image: /images/home.jpg
+programm:
+  - background_image: /images/home.jpg
+natur:
+  - background_image: /images/home.jpg
 gallery:
   - column-size: col-4_sm-12
     aspect-ratio: square
@@ -72,7 +76,9 @@ gallery:
 
 
 <!--------------- PAR Section --------------->
-<section class="grid-center-middle padded-1 tall-70 bg-image bg-plant bg-overlay editable">
+{% for item in page.programm %}
+<section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay editable" style="background-image: url('{{item.background_image}}');">
+{% endfor %}
 
     <div class="col-9_sm-12-bottom center padded white">
         <h2 class="white"> Programm am Rand </h2>
@@ -103,7 +109,9 @@ gallery:
 
 
 <!--------------- NAR Section --------------->
-<section class="grid-center-middle padded-1 tall-70 bg-image bg-plant bg-overlay editable">
+{% for item in page.natur %}
+<section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay editable" style="background-image: url('{{item.background_image}}');">
+{% endfor %}
 
     <div class="col-9_sm-12-bottom center padded">
         <h2 class="white"> Natur am Rand </h2>
