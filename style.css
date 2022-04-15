@@ -86,6 +86,9 @@ body{
 
 h2, h3, h4, h5, h6{
     font-family: 'Didot', Georgia, serif;
+}
+
+h2, h4, h5, h6{
     padding-bottom: 0.8rem;
 }
 
