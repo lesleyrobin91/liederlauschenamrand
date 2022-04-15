@@ -137,10 +137,14 @@ gallery:
 <!--------------- NAR Section --------------->
 {% for item in page.natur %}
 <section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay editable" style="background-image: url('{{item.background_image}}');">
-{% endfor %}
+
 
     <div class="col-9_sm-12-bottom center padded white">
-        <h2 class="white">Programm am Rand</h2>
-        <p class="white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><a class="button" href="/programm">Weiterlesen</a>
+        <h2 class="white">{{ item.title }}</h2>
+        <p class="white"> {{ item.description }} </p>
+
+        {% endfor %}
+
+        <a class="button" href="/programm">Weiterlesen</a>
     </div>
 </section>
