@@ -11,7 +11,7 @@ banner:
     background_image: /images/home.jpg
 llar:
   - title: Liederlauschen am Rand
-    description: >-
+  - description: >-
       Zum 4. Mal in Folge feiern wir mit Euch im geschichtsträchtigen Oderbruch
       3 Tage lang die polnisch-deutsche Nachbarschaft. Für alle Musik- und
       Natur-Liebhaber, Familien und Fahrradfreunde! 
@@ -31,9 +31,14 @@ llar:
       Liederlauschen am Rand, direkt an der Oder!
 programm:
   - background_image: /images/home_programm.jpg
+    title: Programm am Rand
+    description: lorem 
 natur:
   - background_image: /images/home_natur.jpg
+    title: Natur am Rand
+    description: lorem 
 gallery:
+  - title: Impressionen vom Rand
   - column-size: col-4_sm-12
     aspect-ratio: square
     background_image: /images_impressionen/imp_07.jpg
@@ -99,18 +104,21 @@ gallery:
 <!--------------- PAR Section --------------->
 {% for item in page.programm %}
 <section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay" style="background-image: url('{{item.background_image}}');">
-{% endfor %}
 
     <div class="col-9_sm-12-bottom center padded white">
-        <h2 class="white">Programm am Rand</h2>
-        <p class="white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><a class="button" href="/programm">Weiterlesen</a>
+        <h2 class="white">{{ item.title }}</h2>
+        <p class="white">{{ item.description }}</p>
+        
+        {% endfor %}
+
+        <a class="button" href="/programm">Weiterlesen</a>
     </div>
 </section>
 
 
 <!-- Gallery -->
 <section class="center padded capped-width-narrow">
-    <h2>Impressionen vom Rand</h2>
+    <h2>{{ item.title}}</h2>
     <div class="gallery grid" id="lightgallery">
 
       {% for item in page.gallery %}
