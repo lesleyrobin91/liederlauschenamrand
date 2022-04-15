@@ -62,15 +62,14 @@ gallery:
 
 <!--------------- LLAR Section --------------->
 <section class="grid-center-middle padded-1 tall-60 editable">
-
     <div class="col-9_sm-12 center">
-        <h2 class="padded-2"> Liederlauschen am Rand </h2>
-        <p class="padded-b-1"> Stadt – Land – Heimat: das ist für uns der Wunsch nach Vielfalt und Vertrautheit. </p>
-        <p class="padded-b-1"> Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen Reichtum des Landes zusammenbringen und nachhaltig verbinden. </p> 
-        <p class="padded-b-1"> Wir sind ein familienfreundliches – wir sind ein familiäres Festival. Wir limitieren uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur und uns selbst behutsam umgehen. </p>
-        <a href="/idee" class="button button-light"> Weiterlesen</a>
-    </div>    
-
+        <h2 class="padded-2">Liederlauschen am Rand</h2>
+        <p><strong>Zum 4. Mal in Folge feiern wir mit Euch im geschichtstr&auml;chtigen Oderbruch 3 Tage lang die polnisch-deutsche Nachbarschaft. F&uuml;r alle Musik- und Natur-Liebhaber, Familien und Fahrradfreunde!</strong></p>
+        <p><strong>Ein musikalisches Crossover von Elektro, Funk, Reggae, Soul und Folk &uuml;ber Jazz, HipHop, Punk, Rock oder Klassik.</strong></p>
+        <p class="padded-b-1">Stadt &ndash; Land &ndash; Heimat: das ist f&uuml;r uns der Wunsch nach Vielfalt und Vertrautheit.</p>
+        <p class="padded-b-1">Wir m&ouml;chten den kulturellen Reichtum der Stadt mit dem nat&uuml;rlichen Reichtum des Landes zusammenbringen und nachhaltig verbinden.</p>
+        <p class="padded-b-1">Wir sind ein familienfreundliches &ndash; wir sind ein famili&auml;res Festival. Wir limitieren uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur und uns selbst behutsam umgehen.</p><a class="button button-light" href="/idee">Weiterlesen</a>
+    </div>
 </section>
 
 
@@ -78,32 +77,27 @@ gallery:
 <!--------------- PAR Section --------------->
 {% for item in page.programm %}
 <section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay editable" style="background-image: url('{{item.background_image}}');">
-{% endfor %}
-
     <div class="col-9_sm-12-bottom center padded white">
-        <h2 class="white"> Programm am Rand </h2>
-        <p class="white"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  </p>
-        <a href="/programm" class="button"> Weiterlesen</a>
-    </div>    
-
+        <h2 class="white">Programm am Rand</h2>
+        <p class="white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><a class="button" href="/programm">Weiterlesen</a>
+    </div>
 </section>
 
 
 <!-- Gallery -->
 <section class="center padded capped-width-narrow editable">
-    <h2> Impressionen vom Rand </h2>
-
+    <h2>Impressionen vom Rand</h2>
     <div class="gallery grid" id="lightgallery">
-
-        {% for item in page.gallery %}
-            
-        <a class="{{item.column-size}}" href="{{item.background_image}}"> 
-            <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
-            </div>
-        </a>
-        
-        {% endfor %}
-
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_07.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_21.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_04.jpg');">&nbsp;</div>
+        <div class="bg-image landscape" style="background-image: url('/images_impressionen/imp_01.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_17.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_09.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_06.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_18.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_02.jpg');">&nbsp;</div>
+        <div class="bg-image square" style="background-image: url('/images_impressionen/imp_13.jpg');">&nbsp;</div>
     </div>
 </section>
 
@@ -111,11 +105,8 @@ gallery:
 <!--------------- NAR Section --------------->
 {% for item in page.natur %}
 <section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay editable" style="background-image: url('{{item.background_image}}');">
-{% endfor %}
-
     <div class="col-9_sm-12-bottom center padded">
-        <h2 class="white"> Natur am Rand </h2>
-        <p class="white"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  </p>
-        <a href="/idee" class="button"> Weiterlesen</a>
-    </div>     
+        <h2 class="white">Natur am Rand</h2>
+        <p class="white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><a class="button" href="/idee">Weiterlesen</a>
+    </div>
 </section>
