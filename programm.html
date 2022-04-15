@@ -12,6 +12,10 @@ banner:
       column-size: col-12
       aspect-ratio: tall-60
       background_image: /images/Programm.jpg
+lineup: 
+   - heading: PROGRAMM AM RAND
+   - title: Lineup
+     description: lorem
 bands:
    -
       description: 
@@ -198,12 +202,15 @@ gallery:
 
 <!-- Lineup -->
 <section class="capped-width-narrow padded-1">
-  <h1 class="bold editable padded-b-1 center"> PROGRAMM AM RAND </h1>
+   {% for item in page.lineup %}
+  <h1 class="bold editable padded-b-1 center"> {{ item.heading }} </h1>
     
   <div class="center padded-1 editable">
-      <h2> Lineup </h2>
-      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+      <h2> {{ item.title }} </h2>
+      <p> {{ item.description }} </p>
   </div>
+
+  {% endfor %}
 
   <div class="portfolio-filter center padded-b-1" id="portfolio-filter">
     <span>Alle Tage</span> /
