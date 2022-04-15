@@ -68,10 +68,32 @@ gallery:
   - column-size: col-3_sm-12
     aspect-ratio: square
     background_image: /images/theater_04.jpg
-hintergrund: 
+hintergrund:
   - title: Hintergrund
-    description: Seit 12 Jahren veranstaltet der Kulturverein Braumeister das LiederLauschen Festival auf dem Helmholtzplatz in Berlin. An 3 Tagen werden unter freiem Himmel hochkarätige MusikerInnen präsentiert, die ohne große Labels auskommen. Das Ganze seit Anbeginn als Umsonst & Draußen Festival zelebriert, bringt das LiederLauschen die so unterschiedlichen Nutzergruppen des Helmholtzplatzes über die Musik zusammen. Das Schicksal hat es so gewollt, dass die Initiatoren des Festivals ihren Weg in den Oderbruch zum Theater am Rand fanden. Es entstand die Idee, das LiederLauschen zum Theater zu bringen, gewissermaßen also das Zentrum an den Rand zu holen.
+    description: >-
+      Seit 12 Jahren veranstaltet der Kulturverein Braumeister das
+      LiederLauschen Festival auf dem Helmholtzplatz in Berlin. An 3 Tagen
+      werden unter freiem Himmel hochkarätige MusikerInnen präsentiert, die ohne
+      große Labels auskommen. Das Ganze seit Anbeginn als Umsonst & Draußen
+      Festival zelebriert, bringt das LiederLauschen die so unterschiedlichen
+      Nutzergruppen des Helmholtzplatzes über die Musik zusammen. Das Schicksal
+      hat es so gewollt, dass die Initiatoren des Festivals ihren Weg in den
+      Oderbruch zum Theater am Rand fanden. Es entstand die Idee, das
+      LiederLauschen zum Theater zu bringen, gewissermaßen also das Zentrum an
+      den Rand zu holen.
     padded: padded-1
+  - title:
+    description: >-
+      Daraus ist 2018 das LiederLauschen Labor entstanden (ein experimentelles
+      biografisches Musikformat mit 7 unterschiedlichen Künstlern des Festivals)
+      mit je einer Aufführung im Theater am Rand und dem Maschinenhaus in
+      Berlin. Das Brückenbauen fand somit seinen Anfang.
+    padded: padded-0
+  - title:
+    description: >-
+      2019 wagten die LiederLauscher den kulturellen Oderbruch und
+      veranstalteten das erste LiederLauschen am Rand.
+    padded: padded-0
 gallery-two:
   - column-size: col-3_sm-12
     aspect-ratio: square
@@ -101,17 +123,27 @@ gallery-two:
 
 
 <!--------------- LLAR Section --------------->
-<section class="grid-center-middle padded-1 parent">
-    <div class="col-9_sm-12 center">
-        <a href="#natur" class="sticker button button-light"> Mehr <br /> zur Natur <br /> am Rand </a>
-
-        {% for item in page.llar %}
-        <h1 class="bold"> {{ item.headline }} </h1>
-        <h2 class="{{ item.padded }}"> {{ item.title }} </h2>
-        <p> {{ item.description }} </p>
-
-        {% endfor %}
-    </div>    
+<section class="grid-center-middle padded-1 editable parent">
+    <div class="col-9_sm-12 center"><a class="sticker button button-light" href="#natur">Mehr<br />zur Natur<br />am Rand </a>
+        <h1 class="bold">KONZEPT AM RAND</h1>
+        <h2 class="padded-1">Stadt &ndash; Land &ndash; Heimat</h2>
+        <p>Das ist f&uuml;r uns der Wunsch nach Vielfalt und Vertrautheit.</p>
+        <h1 class="bold">&nbsp;</h1>
+        <h2 class="padded-0">&nbsp;</h2>
+        <p>Wir m&ouml;chten den kulturellen Reichtum der Stadt mit dem nat&uuml;rlichen Reichtum des Landes zusammenbringen und nachhaltig verbinden. Wir sind ein familienfreundliches &ndash; wir sind ein famili&auml;res Festival. Wir limitieren uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur und uns selbst behutsam umgehen.</p>
+        <h1 class="bold">&nbsp;</h1>
+        <h2 class="padded-0">&nbsp;</h2>
+        <p>Naturschutz und Nachhaltigkeit sollen grenzenlos gedacht werden. Andernfalls kann es nicht funktionieren. Nur wenn wir gemeinsam &uuml;ber alle Grenzen hinaus verstehen, dass wir mit und nicht gegen die Natur leben k&ouml;nnen, werden wir in die richtige Richtung gehen. Dass das auch noch voller Freude und ohne Entbehrungen m&ouml;glich ist, wollen wir mit unserem Festival zeigen und feiern.</p>
+        <h1 class="bold">&nbsp;</h1>
+        <h2 class="padded-0">&nbsp;</h2>
+        <p>Unser Anspruch ist es, ein NoWaste Festival zu sein. M&uuml;ll soll, wenn er entsteht, in jeder erdenklichen Weise wiederverwertet werden.</p>
+        <h1 class="bold">&nbsp;</h1>
+        <h2 class="padded-0">&nbsp;</h2>
+        <p>Und wir sind dann mal richtig konsequent und kommen mit dem Fahrrad, den &ouml;ffentlichen Verkehrsmitteln oder dem Shuttlebus, damit wir der Natur und diesem Ort nicht zur Last fallen. Wenn es wirklich nicht anders geht, finden wir auch eine L&ouml;sung.</p>
+        <h1 class="bold">&nbsp;</h1>
+        <h2 class="padded-0">&nbsp;</h2>
+        <p>Wir freuen uns auf Euch &ndash; seid herzlich willkommen beim Liederlauschen am Rand!</p>
+    </div>
 </section>
 
 
@@ -140,10 +172,10 @@ gallery-two:
         {% for item in page.hintergrund %}
         <h2 class="{{ item.padded }}"> {{ item.title }} </h2>
         <p> {{ item.description }} </p>
-        <p>
+        <p class="editable">
             Daraus ist 2018 das LiederLauschen Labor entstanden (ein experimentelles biografisches Musikformat mit 7 unterschiedlichen K&uuml;nstlern des Festivals) mit je einer Auff&uuml;hrung im Theater am Rand und dem Maschinenhaus in Berlin. Das Br&uuml;ckenbauen fand somit seinen Anfang.
         </p>
-        <p>
+        <p class="editable">
             2019 wagten die LiederLauscher den kulturellen Oderbruch und veranstalteten das erste LiederLauschen am Rand.
         </p>
         {% endfor %}
@@ -160,14 +192,14 @@ gallery-two:
 
 
 <!--------------- NAR Section --------------->
-<section class="grid-center-middle padded-1" id="natur">
+<section class="grid-center-middle padded-1 editable" id="natur">
 
     <div class="col-9_sm-12 center">
         <h2 class="padded-1"> Natur am Rand </h2>
-        <p>
+        <p class="editable">
             Das Oderbruch gilt als eines der sch&ouml;nsten Landschaften im &ouml;stlichen Deutschland. Eine Perle der Natur, die vor etwas mehr als 250 Jahren noch wild ihre Oderarme durch die Niederungen schl&auml;ngelte. Die Eindeichung und Trockenlegung der Sumpflandschaft unter K&ouml;nig Friedrich II. machte aus sumpfiger Wildnis eines der fruchtbarsten Ackerbaugebiete und eine neue preu&szlig;ische Provinz, die sich aufgrund ihres Fischreichtums und wertvollen Ackerbodens zur Kornkammer Preu&szlig;ens und zur Speisekammer Berlins entwickelte. Den zur&uuml;ckgezogenen Charme hat sich das Oderbruch bis heute bewahren k&ouml;nnen und ist damit ein idealer Wohnraum f&uuml;r eine artenreiche Tierwelt.
         </p>
-        <p>
+        <p class="editable">
             Inmitten des Oderbruchs, in dem 24 Seelen Dorf Zollbr&uuml;cke, befindet sich das Theater am Rand, das aussieht wie ein halb geöffnetes Indianerzelt aus Holz. Es liegt malerisch zwischen Feldern und Bäumen. Auf den Wiesen spazieren Störche umher, die Blicke schweifen über grüne Äcker.
         </p>
     </div>
@@ -191,31 +223,31 @@ gallery-two:
     </section>
 
     <!--------------- NAR Section Weiterführung --------------->
-<section class="grid-center-middle padded-1">
+<section class="grid-center-middle padded-1 editable">
 
     <div class="col-9_sm-12 center">
-        <h3>
+        <h3 class="editable">
             N&uuml;tzling sein
         </h3>
-        <p>
+        <p class="editable">
             Wundersch&ouml;n aber hier ein Festival feiern? Wie l&auml;sst sich unsere Feierkultur mit den Themen Arten- und Naturschutz vereinbaren?
         </p>
-        <p>
+        <p class="editable">
             Das Thema Umweltschutz ist l&auml;ngst im Mainstream angekommen. Dabei wird der Mensch vor allem anhand seiner negativen Einfl&uuml;sse auf die Natur beschrieben. Welchen Effekt hat jedoch dieses Selbstbild auf uns als Akteure. K&ouml;nnen wir statt Sch&auml;dling zu sein nicht auch n&uuml;tzlich agieren f&uuml;r unsere Umwelt? Diese Fragen haben uns lange besch&auml;ftigt und tun es immer noch.
         </p>
-        <p>
+        <p class="editable">
             Mit dem LiederLauschen am Rand wollen wir ein grenz&uuml;berschreitendes Festival veranstalten, das Menschen verschiedener Herkunft und Generation zusammenbringt und zeigt wie wir als kreative Wesen unsere F&auml;higkeiten nutzen, positiv f&uuml;r Menschen und Umwelt zu handeln.
         </p>
-        <p>
+        <p class="editable">
             Wir wollen nicht nur ein No Waste Festival sein (indem wir beispielsweise nur Mehrweggeschirr einsetzen und biologisch abbaubare Materialien benutzen), sondern dar&uuml;berhinaus dar&uuml;ber nachdenken wie wir mit Freude einen wertvollen Beitrag f&uuml;r Mensch und Natur schaffen k&ouml;nnen.
         </p>
-        <p>
+        <p class="editable">
             Wir wollen mit euch mehr &uuml;ber biologische Kreislaufwirtschaft erfahren und Anregungen zur Herstellung und Verwendung alternativer und nachhaltiger Dinge des Alltags erhalten.
         </p> 
-        <p>
+        <p class="editable">
             Wir laden Akteure und Institutionen ein, die sich nachhaltig und umweltbewusst in ihrer Region engagieren. Wir bauen die Infrastruktur daf&uuml;r, das ihr mit Genuss auch ohne PKW zum Festival kommen k&ouml;nnt.
         </p> 
-        <p>
+        <p class="editable">
             Das LiederLauschen am Rand soll jedes Jahr Anfang der Sommerferien stattfinden. Mit euch zusammen wollen wir Jahr f&uuml;r Jahr unser Festival in Richtung Nachhaltigkeit weiterentwickeln. Lasst uns zusammen Sch&ouml;nes bewirken!
         </p>
     </div>    
