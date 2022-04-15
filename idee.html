@@ -97,6 +97,10 @@ hintergrund:
       2019 wagten die LiederLauscher den kulturellen Oderbruch und
       veranstalteten das erste LiederLauschen am Rand.
     padded: padded-0
+nar:
+  - title: Natur am Rand
+    description: lorem
+    padded: padded-1
 gallery-two:
   - column-size: col-3_sm-12
     aspect-ratio: square
@@ -110,6 +114,9 @@ gallery-two:
   - column-size: col-3_sm-12
     aspect-ratio: square
     background_image: /images/Natur_07.jpg
+nuetzling:
+  - title: Nützling sein
+    description: lorem
 ---
 
 <!-- Intro Banner -->
@@ -182,13 +189,17 @@ gallery-two:
 <section class="grid-center-middle padded-1" id="natur">
 
     <div class="col-9_sm-12 center">
-        <h2 class="padded-1"> Natur am Rand </h2>
+
+        {% for item in page.nar %}
+        <h2 class="padded-1"> {{ item.title }} </h2>
+        <p> {{ item.description }} </p>
         <p>
             Das Oderbruch gilt als eines der sch&ouml;nsten Landschaften im &ouml;stlichen Deutschland. Eine Perle der Natur, die vor etwas mehr als 250 Jahren noch wild ihre Oderarme durch die Niederungen schl&auml;ngelte. Die Eindeichung und Trockenlegung der Sumpflandschaft unter K&ouml;nig Friedrich II. machte aus sumpfiger Wildnis eines der fruchtbarsten Ackerbaugebiete und eine neue preu&szlig;ische Provinz, die sich aufgrund ihres Fischreichtums und wertvollen Ackerbodens zur Kornkammer Preu&szlig;ens und zur Speisekammer Berlins entwickelte. Den zur&uuml;ckgezogenen Charme hat sich das Oderbruch bis heute bewahren k&ouml;nnen und ist damit ein idealer Wohnraum f&uuml;r eine artenreiche Tierwelt.
         </p>
         <p>
             Inmitten des Oderbruchs, in dem 24 Seelen Dorf Zollbr&uuml;cke, befindet sich das Theater am Rand, das aussieht wie ein halb geöffnetes Indianerzelt aus Holz. Es liegt malerisch zwischen Feldern und Bäumen. Auf den Wiesen spazieren Störche umher, die Blicke schweifen über grüne Äcker.
         </p>
+        {% endfor %}
     </div>
 </section>
     
@@ -213,9 +224,10 @@ gallery-two:
 <section class="grid-center-middle padded-1">
 
     <div class="col-9_sm-12 center">
-        <h3>
-            N&uuml;tzling sein
-        </h3>
+
+        {% for item in page.nuetzling %}
+        <h3> {{ item.title }} </h3>
+        <p> {{ item.description }} </p>
         <p>
             Wundersch&ouml;n aber hier ein Festival feiern? Wie l&auml;sst sich unsere Feierkultur mit den Themen Arten- und Naturschutz vereinbaren?
         </p>
@@ -237,6 +249,8 @@ gallery-two:
         <p>
             Das LiederLauschen am Rand soll jedes Jahr Anfang der Sommerferien stattfinden. Mit euch zusammen wollen wir Jahr f&uuml;r Jahr unser Festival in Richtung Nachhaltigkeit weiterentwickeln. Lasst uns zusammen Sch&ouml;nes bewirken!
         </p>
+
+        {% endfor %}
     </div>    
 
 </section>
