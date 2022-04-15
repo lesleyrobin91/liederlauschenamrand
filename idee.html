@@ -14,9 +14,11 @@ banner:
 llar:
   - headline: KONZEPT AM RAND
     title: Stadt – Land – Heimat
+    padded: padded-1
     description: Das ist für uns der Wunsch nach Vielfalt und Vertrautheit.
   - headline:
     title:
+    padded: padded-0
     description: >-
       Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen
       Reichtum des Landes zusammenbringen und nachhaltig verbinden. Wir sind ein
@@ -25,6 +27,7 @@ llar:
       und uns selbst behutsam umgehen.
   - headline:
     title:
+    padded: padded-0
     description: >-
       Naturschutz und Nachhaltigkeit sollen grenzenlos gedacht werden.
       Andernfalls kann es nicht funktionieren. Nur wenn wir gemeinsam über alle
@@ -34,11 +37,13 @@ llar:
       Festival zeigen und feiern.
   - headline:
     title:
+    padded: padded-0
     description: >-
       Unser Anspruch ist es, ein NoWaste Festival zu sein. Müll soll, wenn er
       entsteht, in jeder erdenklichen Weise wiederverwertet werden.
   - headline:
     title:
+    padded: padded-0
     description: >-
       Und wir sind dann mal richtig konsequent und kommen mit dem Fahrrad, den
       öffentlichen Verkehrsmitteln oder dem Shuttlebus, damit wir der Natur und
@@ -46,6 +51,7 @@ llar:
       finden wir auch eine Lösung.
   - headline:
     title:
+    padded: padded-0
     description: >-
       Wir freuen uns auf Euch – seid herzlich willkommen beim Liederlauschen am
       Rand!
@@ -97,25 +103,8 @@ gallery-two:
 
         {% for item in page.llar %}
         <h1 class="bold"> {{ item.headline }} </h1>
-        <h2 class="padded-1"> {{ item.title }} </h2>
+        <h2 class="{{ item.padded }}"> {{ item.title }} </h2>
         <p> {{ item.description }} </p>
-        <p class="editable"> Wir möchten den kulturellen Reichtum der Stadt mit dem natürlichen
-            Reichtum des Landes zusammenbringen und nachhaltig verbinden. Wir sind ein
-            familienfreundliches – wir sind ein familiäres Festival. Wir limitieren
-            uns liebevoll auf wenige hundert Menschen, weil wir mit dem Ort, der Natur
-            und uns selbst behutsam umgehen. </p>
-        <p class="editable">
-            Naturschutz und Nachhaltigkeit sollen grenzenlos gedacht werden. Andernfalls kann es nicht funktionieren. Nur wenn wir gemeinsam &uuml;ber alle Grenzen hinaus verstehen, dass wir mit und nicht gegen die Natur leben k&ouml;nnen, werden wir in die richtige Richtung gehen. Dass das auch noch voller Freude und ohne Entbehrungen m&ouml;glich ist, wollen wir mit unserem Festival zeigen und feiern.
-        </p>
-        <p class="editable">
-            Unser Anspruch ist es, ein NoWaste Festival zu sein. M&uuml;ll soll, wenn er entsteht, in jeder erdenklichen Weise wiederverwertet werden.
-        </p> 
-        <p class="editable">
-            Und wir sind dann mal richtig konsequent und kommen mit dem Fahrrad, den &ouml;ffentlichen Verkehrsmitteln oder dem Shuttlebus, damit wir der Natur und diesem Ort nicht zur Last fallen. Wenn es wirklich nicht anders geht, finden wir auch eine L&ouml;sung.
-        </p>  
-        <p class="editable">
-            Wir freuen uns auf Euch &ndash; seid herzlich willkommen beim Liederlauschen am Rand!
-        </p>
 
         {% endfor %}
     </div>    
