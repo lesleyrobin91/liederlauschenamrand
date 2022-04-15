@@ -358,6 +358,8 @@ footer a {
     padding: 1rem;
 }
 
+.google { padding: 0 0 1rem 0;}
+
 a:hover,
 .act:hover{
     cursor: pointer;
