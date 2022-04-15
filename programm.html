@@ -126,8 +126,9 @@ bands:
       type: sonntag
       tag: drückerkolonne
       url: www.drueckerkolonne.org
+header:
+  - heading: Workshops am Rand
 workshops:
-   - heading: Workshops am Rand
    - 
       title: Workshop 1
       description: >-
@@ -242,10 +243,11 @@ gallery:
 
 <!-- Workshops -->
 <section class="grid-center-middle padded padded-b-0">
+    {% for item in page.header %}
     <div class="col-12 center padded-b-1">
         <h2 class="editable"> {{ item.heading }} </h2>
     </div>
-
+    {% endfor %}
     {% for item in page.workshops %}
 
     <div class="col-4_md-6_sm-12 padded-2 mob-padded">
