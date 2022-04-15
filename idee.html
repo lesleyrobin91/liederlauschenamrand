@@ -68,6 +68,10 @@ gallery:
   - column-size: col-3_sm-12
     aspect-ratio: square
     background_image: /images/theater_04.jpg
+hintergrund: 
+  - title: Hintergrund
+    padded: padded-1
+    description: Seit 12 Jahren veranstaltet der Kulturverein Braumeister das LiederLauschen Festival auf dem Helmholtzplatz in Berlin. An 3 Tagen werden unter freiem Himmel hochkarätige MusikerInnen präsentiert, die ohne große Labels auskommen. Das Ganze seit Anbeginn als Umsonst & Draußen Festival zelebriert, bringt das LiederLauschen die so unterschiedlichen Nutzergruppen des Helmholtzplatzes über die Musik zusammen. Das Schicksal hat es so gewollt, dass die Initiatoren des Festivals ihren Weg in den Oderbruch zum Theater am Rand fanden. Es entstand die Idee, das LiederLauschen zum Theater zu bringen, gewissermaßen also das Zentrum an den Rand zu holen.
 gallery-two:
   - column-size: col-3_sm-12
     aspect-ratio: square
@@ -129,19 +133,20 @@ gallery-two:
 </section>
 
 <!--------------- LLAR Section --------------->
-<section class="grid-center-middle padded-1 editable">
+<section class="grid-center-middle padded-1">
 
     <div class="col-9_sm-12 center">
-        <h2 class="padded-1"> Hintergrund </h2>
-        <p class="editable">
-            Seit 12 Jahren veranstaltet der Kulturverein Braumeister das LiederLauschen Festival auf dem Helmholtzplatz in Berlin. An 3 Tagen werden unter freiem Himmel hochkar&auml;tige MusikerInnen pr&auml;sentiert, die ohne gro&szlig;e Labels auskommen. Das Ganze seit Anbeginn als Umsonst &amp; Drau&szlig;en Festival zelebriert, bringt das LiederLauschen die so unterschiedlichen Nutzergruppen des Helmholtzplatzes &uuml;ber die Musik zusammen. Das Schicksal hat es so gewollt, dass die Initiatoren des Festivals ihren Weg in den Oderbruch zum Theater am Rand fanden. Es entstand die Idee, das LiederLauschen zum Theater zu bringen, gewisserma&szlig;en also das Zentrum an den Rand zu holen.
-        </p>
+
+        {% for item in page.hintergrund %}
+        <h2 class="{{ item.padded }}"> {{ item.title }} </h2>
+        <p> {{ item.description }} </p>
         <p class="editable">
             Daraus ist 2018 das LiederLauschen Labor entstanden (ein experimentelles biografisches Musikformat mit 7 unterschiedlichen K&uuml;nstlern des Festivals) mit je einer Auff&uuml;hrung im Theater am Rand und dem Maschinenhaus in Berlin. Das Br&uuml;ckenbauen fand somit seinen Anfang.
         </p>
         <p class="editable">
             2019 wagten die LiederLauscher den kulturellen Oderbruch und veranstalteten das erste LiederLauschen am Rand.
         </p>
+        {% endfor %}
     </div>    
 
 </section>
