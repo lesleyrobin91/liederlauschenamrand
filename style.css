@@ -490,6 +490,21 @@ form label{
     .mob-padded { padding: 0.5rem 2rem; }
     
     #mob-height {  min-height: 70vw; }
+
+    .sticker { 
+        top: -3%;
+        right: 1%;
+        line-height: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .button-sm {
+        padding: 0.5rem 1rem;
+    }
+
+    .center-sm { text-align: center; }
+
+    .logo-footer { max-height: 15vh; }
 }
 
 
