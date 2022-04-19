@@ -102,7 +102,7 @@ gallery:
 
       {% endfor %}
 
-        <a class="button button-light" href="/idee">Weiterlesen</a>
+        <a class="button button-light editable" href="/idee">Weiterlesen</a>
     </div>
 </section>
 
@@ -114,11 +114,11 @@ gallery:
 
     <div class="col-9_sm-12-bottom center padded white">
         <h2 class="white">{{ item.title }}</h2>
-        <p class="white">{{ item.description }}</p>
+        <p class="white bg-text">{{ item.description }}</p>
         
         {% endfor %}
 
-        <a class="button" href="/programm">Weiterlesen</a>
+        <a class="button editable" href="/programm">Weiterlesen</a>
     </div>
 </section>
 
@@ -143,15 +143,15 @@ gallery:
 
 <!--------------- NAR Section --------------->
 {% for item in page.natur %}
-<section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay editable" style="background-image: url('{{item.background_image}}');">
+<section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay" style="background-image: url('{{item.background_image}}');">
 
 
     <div class="col-9_sm-12-bottom center padded white">
         <h2 class="white">{{ item.title }}</h2>
-        <p class="white"> {{ item.description }} </p>
+        <p class="white bg-text"> {{ item.description }} </p>
 
         {% endfor %}
 
-        <a class="button" href="/programm">Weiterlesen</a>
+        <a class="button editable" href="/idee">Weiterlesen</a>
     </div>
 </section>
