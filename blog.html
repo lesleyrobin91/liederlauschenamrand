@@ -1,0 +1,71 @@
+---
+layout: default
+language: german
+not-translated: true
+seo:
+   title: Für alle Musik- und Natur-Liebhaber, Familien und Fahrradfreunde!
+   description: >-
+      Ein musikalisches Crossover von Elektro, Funk, Reggae, Soul und Folk über
+      Jazz, HipHop, Punk, Rock oder Klassik.
+   social_image: /images_impressionen/imp_01.jpg
+   keywords: liederlauschen am rand
+   hide-from-google: false
+banner:
+   -
+      overlay:
+      column-size: col-12
+      aspect-ratio: tall-60
+      background_image: /images/Info.jpg
+intro:
+   -
+      headline: Blog
+      title: Alles rund um nachhaltige Festivals
+      description: >-
+         Wir sind ein kleines Festival und das aus gutem Grund. Wir möchten
+         weder uns noch dem Ort und schon gar nicht der Natur zur Last fallen.
+         Wir freuen uns deshalb auf ein kleines, feines Fest mit Euch und
+         großartigen Künstlern. Neben der Vorfreude habt Ihr sicherlich einige
+         organisatorische Fragen, die wir nachfolgend so gut wie es der aktuelle
+         Planungsstand zulässt, beantworten wollen.
+---
+
+<!-- Intro Banner -->
+<section class="grid">
+
+    {% for item in page.banner %}
+    <div class="{{item.column-size}}"> 
+        <div class="bg-image {{item.aspect-ratio}} {{ item.overlay }}" style="background-image: url('{{item.background_image}}');"> 
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
+<!-- Intro Text & Blog loop-->
+<section class="capped-width grid">
+    {% for item in page.intro %}
+    <div class="col-12 padded-1">
+        <h1 class="bold padded-b-1 center"> {{ item.headline }} </h1>
+        <h2 class="center"> {{ item.title }} </h2>
+        <p class="center"> {{ item.description }} </p>
+    </div>
+    {% endfor %}
+  
+  <div class="capped-width grid-center">
+
+    {% for post in site.posts %}
+    
+      <div class="col-4_xs-12 padded-1">
+    
+          <a href="{{ post.url }}" class="bg-image-blog square post-item tall-70" style="background-image:url('{{ post.featured_image }}')"> </a>
+          <h3> {{ post.title }} </h3>
+          <p> {{ post.description }} </p>
+          <a href="{{ post.url }}" class="post-item subtle-button"> Read More </a>
+    
+      </div>
+        
+    {% endfor %}
+
+  </div>
+</section>
+

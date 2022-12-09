@@ -1,0 +1,50 @@
+---
+layout: default-blog
+---
+
+<!----------------- Main Blog Content ------------------>
+<section class="capped-width blog-content padded">
+
+    <div class="intro padded-1 center margin-b-2">
+        <h1> {{ page.title }} </h1>
+        <p> {{ page.date | date_to_string }} </p>
+            
+            {% for item in page.categories %}
+                <span class="tag"> {{ item }} </span>
+            {% endfor %}
+
+    </div>        
+    
+    <div class="padded-1">
+           
+        {{content}}
+
+    </div>
+
+</section>
+
+
+<!----------------- Recent Posts ------------------>
+
+<section class="padded bg-light">          
+            
+    <h2 class="center"> More Posts 
+
+        <div class="grid-center">  
+
+        {% for post in site.posts limit:3 %}
+
+        <a href="{{post.url}}" class="col-4_xs-12 padded-2 post-item"> 
+            <div class="bg-image landscape margin-b-05" style="background-image:url({{post.featured_image}})"> </div>
+            
+            <span class="post-info margin-t-1"> {{ post.date | date_to_string }} </span>
+            <h3> {{ post.title }} </h3>
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+</h2>
+</section>
+
