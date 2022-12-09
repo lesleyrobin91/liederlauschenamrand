@@ -421,6 +421,10 @@ p:last-child {
     border-radius: 4%;
 }
 
+.post-info {
+    font-size: 0.8rem;
+  }
+
 /* Filter navigation */
 .portfolio-filter span {
     text-transform: uppercase; 

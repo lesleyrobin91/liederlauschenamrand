@@ -51,13 +51,15 @@ intro:
     </div>
     {% endfor %}
   
-  <div class="capped-width grid-center">
+  <div class="capped-width grid-center padded">
 
     {% for post in site.posts %}
     
       <div class="col-4_xs-12 padded-1">
     
-          <a href="{{ post.url }}" class="bg-image-blog square post-item tall-70" style="background-image:url('{{ post.featured_image }}')"> </a>
+          <a href="{{ post.url }}"> 
+            <div class="bg-image-blog square post-item" style="background-image:url('{{ post.featured_image }}')"> </div>
+          </a>
           <h3> {{ post.title }} </h3>
           <p> {{ post.description }} </p>
           <a href="{{ post.url }}" class="post-item subtle-button"> Read More </a>
