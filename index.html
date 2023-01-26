@@ -6,7 +6,7 @@ seo:
     Ein multi-genre Musik Festival von Elektro, Funk, Reggae, Soul und Folk über
     Jazz, HipHop, Punk, Rock oder Klassik.
   social_image: /images_impressionen/imp_01.jpg
-  keywords: liederlauschen am rand
+  keywords: liederlauschen am rand- openair festival im oderbruch
   hide-from-google: false
 banner:
   - overlay:
@@ -74,7 +74,13 @@ gallery:
     aspect-ratio: square
     background_image: /images_impressionen/imp_13.jpg
 blog-header: Alles rund um nachhaltige Festivals
-blog-text: Wir sind ein kleines Festival und das aus gutem Grund. Wir möchten weder uns noch dem Ort und schon gar nicht der Natur zur Last fallen. Wir freuen uns deshalb auf ein kleines, feines Fest mit Euch und großartigen Künstlern. Neben der Vorfreude habt Ihr sicherlich einige organisatorische Fragen, die wir nachfolgend so gut wie es der aktuelle Planungsstand zulässt, beantworten wollen.
+blog-text: >-
+  Wir sind ein kleines Festival und das aus gutem Grund. Wir möchten weder uns
+  noch dem Ort und schon gar nicht der Natur zur Last fallen. Wir freuen uns
+  deshalb auf ein kleines, feines Fest mit Euch und großartigen Künstlern. Neben
+  der Vorfreude habt Ihr sicherlich einige organisatorische Fragen, die wir
+  nachfolgend so gut wie es der aktuelle Planungsstand zulässt, beantworten
+  wollen.
 ---
 <!-- Intro Banner -->
 {% for item in page.banner %}
@@ -163,9 +169,9 @@ blog-text: Wir sind ein kleines Festival und das aus gutem Grund. Wir möchten w
   <div class="capped-width grid-center">
 
       <div class="col-12 padded-1 center margin-b-1">
-          <h2> {{ page.blog-header }} </h2>
+          <h2> {{ page.blog-header }} 
           <p class="editable"> {{ page.blog-text }}</p>
-      </div>
+      
 
       {% assign featured_posts = site.posts | where: 'featured', true %}
 
@@ -190,6 +196,6 @@ blog-text: Wir sind ein kleines Festival und das aus gutem Grund. Wir möchten w
 
       {% endfor %}
 
-  </div>
-  </section>
+  
+  
 ------------------------>
