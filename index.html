@@ -25,7 +25,7 @@ llar:
     description: >-
       Wir verstehen uns als überschaubares, familienfreundliches und
       umweltbewusstes Open Air. Deshalb limitieren wir uns auch auf wenige
-      hundert Gäste. Gemeinsam mit unseren polnischen Nachbarn wollen wir zum
+      Hundert Gäste. Gemeinsam mit unseren polnischen Nachbarn wollen wir zum
       fünften Mal in Folge ein großartiges Festival veranstalten. Freut euch auf
       ein unvergessliches Wochenende mit jeder Menge Spaß und guter Laune.
   - title:
@@ -102,18 +102,16 @@ blog-text: >-
 
 <!--------------- LLAR Section --------------->
 <section class="grid-center-middle tall-60">
-    <div class="col-9_sm-12 padded padded-t-1">
+    <div class="col-9_sm-12 center padded padded-t-1">
 
       {% for item in page.llar%}
 
-        <h1 class="bold center">{{ item.title }}</h1>
+        <h1 class="bold">{{ item.title }}</h1>
         <p class="padded-t-1"> {{item.description}} </p>
 
       {% endfor %}
-        <div class="center">
-          <a class="button button-light editable" href="/idee">Weiterlesen</a>
-        </div>
-        
+
+        <a class="button button-light editable" href="/idee">Weiterlesen</a>
     </div>
 </section>
 
