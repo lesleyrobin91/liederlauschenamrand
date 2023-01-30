@@ -193,12 +193,12 @@ nuetzling:
 
 <!--------------- LLAR Section --------------->
 <section class="grid-center-middle padded-1 parent">
-    <div class="col-9_sm-12 center">
+    <div class="col-9_sm-12">
         <a href="#natur" class="sticker button button-light button-sm"> Mehr <br /> zur Natur <br /> am Rand </a>
 
         {% for item in page.llar %}
-        <h1 class="bold"> {{ item.headline }} </h1>
-        <h2 class="{{ item.padded }}"> {{ item.title }} </h2>
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
         <p> {{ item.description }} </p>
 
         {% endfor %}
@@ -226,10 +226,10 @@ nuetzling:
 <!--------------- LLAR Section --------------->
 <section class="grid-center-middle padded-1">
 
-    <div class="col-9_sm-12 center">
+    <div class="col-9_sm-12">
 
         {% for item in page.hintergrund %}
-        <h2 class="{{ item.padded }}"> {{ item.title }} </h2>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
         <p> {{ item.description }} </p>
         {% endfor %}
     </div>    
@@ -247,10 +247,10 @@ nuetzling:
 <!--------------- NAR Section --------------->
 <section class="grid-center-middle padded-1" id="natur">
 
-    <div class="col-9_sm-12 center">
+    <div class="col-9_sm-12">
 
         {% for item in page.nar %}
-        <h2 class=" {{ item.padded }} "> {{ item.title }} </h2>
+        <h2 class="center {{ item.padded }} "> {{ item.title }} </h2>
         <p> {{ item.description }} </p>
     
         {% endfor %}
@@ -277,10 +277,10 @@ nuetzling:
     <!--------------- NAR Section Weiterführung --------------->
 <section class="grid-center-middle padded-1">
 
-    <div class="col-9_sm-12 center">
+    <div class="col-9_sm-12">
 
         {% for item in page.nuetzling %}
-        <h3> {{ item.title }} </h3>
+        <h3 class="center"> {{ item.title }} </h3>
         <p> {{ item.description }} </p>
         
         {% endfor %}
