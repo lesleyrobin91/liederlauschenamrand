@@ -302,6 +302,13 @@ p:last-child {
     font-size: 1.2rem;
 }
 
+.link {
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
 /* images */ 
 .bg-image{
     background-color: #F9F7F3;

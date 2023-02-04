@@ -111,7 +111,7 @@ gallery:
     aspect-ratio: square
     background_image: /galerie/2019/2019_60.jpg
 ---
-<!-- Intro Banner -->
+<!-- Intro Banner 
 <section class="grid">
 
     {% for item in page.banner %}
@@ -122,15 +122,23 @@ gallery:
     {% endfor %}
  
  </section>
+ -->
 
 <!-- Gallery -->
 <section class="center padded padded-t-1 capped-width-narrow">
+  <div>
     {% for item in page.llar%}
 
-        <h1 class="bold center">{{ item.title }}</h1>
-        <h2> {{item.sub-heading}} </h2>
+    <h1 class="bold center">{{ item.title }}</h1>
+    <h2> {{item.sub-heading}} </h2>
 
     {% endfor %}
+
+    <p> Sollte ein Bild dabei sein, welches ihr nicht veröffentlicht sehen möchtet, meldet euch bitte bei uns per <a class="link" href="mailto:liederlauschenamrand@gmail.com"> Mail</a>. Wir werden das Bild dann umgehend entfernen. </p>
+    <p> Fotos: © Liederlauschen, Joe Doe Photography & Design <br> Instagram: <a class="link" href="https://www.instagram.com/jdpd105/" target="_blank"> @jdpd105 </a> <br> Facebook: <a class="link" href="https://www.facebook.com/jdpd105" target="_blank"> @jdpd105 </a>  </p>
+  
+  </div>
+    
     
     <div class="gallery grid" id="lightgallery">
 
