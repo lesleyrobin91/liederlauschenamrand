@@ -22,7 +22,7 @@ lineup:
       title: Ankündigung 2023
       description: >-
          Hier werden wir euch in Kürze mit Updates rund um das Liederlauschen am
-         Rand 2023 versorgen. Stay tuned! Wir freuen uns!
+         Rand 2023 versorgen. Stay tuned, wir freuen uns! In der Zwischenzeit schwelgt doch einfach ein bisschen in den Aufnahmen der letzten Jahre!
 rueckblick:
    -
       heading:
@@ -258,14 +258,7 @@ gallery:
 
    {% for item in page.heading %}
    <h1 class="bold padded-b-1 center"> {{ item.heading }} </h1>
-   {% endfor %}
-
-   <div class="center">  
-      <a class ="link" href="/2019"> 2019 </a>
-      <a class ="link" href="/2020"> 2020 </a>
-      <a class ="link" href="/2021"> 2021 </a>
-      <a class ="link" href="/2022"> 2022 </a>
-   </div>  
+   {% endfor %} 
 
    {% for item in page.lineup %}
    <div class="padded-1">
@@ -273,6 +266,13 @@ gallery:
       <p> {{ item.description }} </p>
    </div>
    {% endfor %}
+
+   <div class="center">  
+      <a class ="link" href="/2019"> 2019 </a>
+      <a class ="link" href="/2020"> 2020 </a>
+      <a class ="link" href="/2021"> 2021 </a>
+      <a class ="link" href="/2022"> 2022 </a>
+   </div> 
 
    {% for item in page.rueckblick %}
    <div class="padded-1">
