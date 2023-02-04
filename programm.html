@@ -14,13 +14,16 @@ banner:
       column-size: col-12
       aspect-ratio: tall-60
       background_image: /images/Programm.jpg
-lineup:
+heading:
    -
       heading: PROGRAMM AM RAND
+lineup:
+   -
       title: Ankündigung 2023
       description: >-
          Hier werden wir euch in Kürze mit Updates rund um das Liederlauschen am
          Rand 2023 versorgen. Stay tuned! Wir freuen uns!
+rueckblick:
    -
       heading:
       title: Lineup 2022
@@ -252,15 +255,31 @@ gallery:
 
 <!-- Lineup -->
 <section class="capped-width-narrow padded-1">
-   {% for item in page.lineup %}
-   <h1 class="bold padded-b-1 center"> {{ item.heading }} </h1>
 
-  <div class="padded-1">
+   {% for item in page.heading %}
+   <h1 class="bold padded-b-1 center"> {{ item.heading }} </h1>
+   {% endfor %}
+
+   <div class="center">  
+      <a class ="link" href="/2019"> 2019 </a>
+      <a class ="link" href="/2020"> 2020 </a>
+      <a class ="link" href="/2021"> 2021 </a>
+      <a class ="link" href="/2022"> 2022 </a>
+   </div>  
+
+   {% for item in page.lineup %}
+   <div class="padded-1">
       <h2 class="center"> {{ item.title }} </h2>
       <p> {{ item.description }} </p>
-  </div>
+   </div>
+   {% endfor %}
 
-  {% endfor %}
+   {% for item in page.rueckblick %}
+   <div class="padded-1">
+      <h2 class="center"> {{ item.title }} </h2>
+      <p> {{ item.description }} </p>
+   </div>
+   {% endfor %}
 
   <div class="portfolio-filter center padded-b-1" id="portfolio-filter">
     <span>Alle Tage</span> /
