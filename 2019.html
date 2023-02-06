@@ -125,16 +125,16 @@ gallery:
  -->
 
 <!-- Gallery -->
-<section class="center padded padded-t-1 capped-width-narrow">
-  <div>
+<section class="padded padded-t-1 capped-width-narrow">
+  <div class="padded-05">
     {% for item in page.llar%}
 
     <h1 class="bold center">{{ item.title }}</h1>
-    <h2> {{item.sub-heading}} </h2>
+    <h2 class="center"> {{item.sub-heading}} </h2>
 
     {% endfor %}
 
-    <div class="center padded-1">  
+    <div class="center padded-1 capped-width-narrow">  
       <a class ="link" href="/2020"> 2020 </a>
       <a class ="link" href="/2021"> 2021 </a>
       <a class ="link" href="/2022"> 2022 </a>

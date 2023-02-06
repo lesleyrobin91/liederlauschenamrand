@@ -155,12 +155,12 @@ gallery:
 -->
 
 <!-- Gallery -->
-<section class="center padded padded-t-1 capped-width-narrow">
-    <div>
+<section class="padded padded-t-1 capped-width-narrow">
+    <div class="padded-05">
       {% for item in page.llar%}
 
       <h1 class="bold center">{{ item.title }}</h1>
-      <h2> {{item.sub-heading}} </h2>
+      <h2 class="center"> {{item.sub-heading}} </h2>
 
       {% endfor %}
 

@@ -138,6 +138,7 @@ html {
 
 
 .padded    { padding: 5%;    }
+.padded-05 { padding: 0.5rem }
 .padded-1  { padding: 1rem;  }
 .padded-2  { padding: 2rem;  }
 .padded-3  { padding: 3rem;  }
@@ -641,6 +642,8 @@ form label{
         font-size: 0.9rem; 
         line-height: 1.3rem; 
     }
+    .link {font-size: 0.9rem;}
+
     .mob-button { min-width: 30vw;}
     .mob-footer { font-size: 0.9rem; }
     .mob-center { text-align: center; }
