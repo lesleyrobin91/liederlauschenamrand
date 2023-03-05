@@ -585,11 +585,11 @@ ul {
     overflow: hidden;
   }
   
-  li {
+li {
     float: right;
   }
   
-  li a, .dropbtn {
+li a, .dropbtn {
     display: inline-block;
     color: #333333;
     text-align: center;
@@ -597,11 +597,11 @@ ul {
     text-decoration: none;
   }
   
-  li.dropdown {
+li.dropdown {
     display: inline-block;
   }
   
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -610,7 +610,7 @@ ul {
     z-index: 12;
   }
   
-  .dropdown-content a {
+.dropdown-content a {
     color: #333333;
     padding: 12px 16px;
     text-decoration: none;
@@ -618,9 +618,9 @@ ul {
     text-align: center;
   }
   
-  .dropdown-content a:hover {color: #EF2751;}
+.dropdown-content a:hover {color: #EF2751;}
   
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
   }
 
@@ -661,17 +661,6 @@ form label{
 /* ---------- SM Media Query (768px) ---------- */ 
 
 @media (max-width: 48em) {
-    .big-vertical {
-        transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-        font-size: 5vh;
-        display: block;
-        position: absolute;
-        white-space: nowrap;
-        top: 50%;
-        right: 50%;
-        }
-    .other { right: -20%; }
-
     .mob-padded-0 {
             padding: 0;
         }
@@ -681,7 +670,7 @@ form label{
     .flex-flip-xs {flex-direction: column-reverse;}
 
     .mob-hide { display: none; }
-  	.mob-show { display: block; }
+  	.mob-show { display: inline-block; }
     
     h2 { font-size: 2rem;}
 
