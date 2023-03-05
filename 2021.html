@@ -13,9 +13,12 @@ banner:
     column-size: col-12
     aspect-ratio: tall-60
     background_image: /images/Programm.jpg
-llar:
-  - title: Impressionen vom Rand
-  - sub-heading: 2021
+title: Impressionen vom Rand
+sub-heading: 2021
+description: Sollte ein Bild dabei sein, welches ihr nicht veröffentlicht sehen möchtet, meldet euch bitte bei uns per <a class="link" href="mailto:liederlauschenamrand@gmail.com"> Mail</a>. Wir werden das Bild dann umgehend entfernen.
+credit: Fotos © Liederlauschen Joe Doe Photography & Design
+instagram: Instagram <a class="link" href="https://www.instagram.com/jdpd105/" target="_blank"> @jdpd105 </a>
+facebook: Facebook <a class="link" href="https://www.facebook.com/jdpd105" target="_blank"> @jdpd105 </a> 
 gallery:
   - column-size: col-3_sm-12
     aspect-ratio: square
@@ -138,26 +141,17 @@ gallery:
 
 <!-- Gallery -->
 <section class="padded padded-t-1 capped-width-narrow">
-    <div class="padded-05">
-      {% for item in page.llar%}
+  <div class="padded-05">
 
-      <h1 class="bold center">{{ item.title }}</h1>
-      <h2 class="center"> {{item.sub-heading}} </h2>
-
-      {% endfor %}
-
-      <!-- 
-      <div class="center padded-1">  
-        <a class="link" href="/2019"> 2019 </a>
-        <a class="link" href="/2020"> 2020 </a>
-        <a class="link" href="/2022"> 2022 </a>
-        <a class="link" href="/programm"> 2023 </a>
-      </div> 
-      -->
-      <p> Sollte ein Bild dabei sein, welches ihr nicht veröffentlicht sehen möchtet, meldet euch bitte bei uns per <a class="link" href="mailto:liederlauschenamrand@gmail.com"> Mail</a>. Wir werden das Bild dann umgehend entfernen. </p>
-      <p> Fotos: © Liederlauschen, Joe Doe Photography & Design <br /> Instagram: <a class="link" href="https://www.instagram.com/jdpd105/" target="_blank"> @jdpd105 </a> <br /> Facebook: <a class="link" href="https://www.facebook.com/jdpd105" target="_blank"> @jdpd105 </a>  </p>
+    <h1 class="bold center">{{ page.title }}</h1>
+    <h2 class="center"> {{page.sub-heading}} </h2>
+    <p class="padded-b-0"> {{page.description}} </p>
+    <p class="padded-b-0"> {{page.credit}} </p>
+    <p class="padded-b-0"> {{page.instagram}} </p>
+    <p class="padded-b-0"> {{page.facebook}} </p>
+  
+  </div>
     
-    </div>
     
     <div class="gallery grid" id="lightgallery">
 
