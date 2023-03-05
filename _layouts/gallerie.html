@@ -1,3 +1,30 @@
 ---
 layout: default
 ---
+<!-- Gallery -->
+<section class="padded padded-t-1 capped-width-narrow">
+    <div class="padded-05">
+  
+      <h1 class="bold center">{{ page.title }}</h1>
+      <h2 class="center"> {{page.sub-heading}} </h2>
+      <p> {{page.description}} </p>
+      <p class="padded-b-0"> {{page.credit}} </p>
+      <p class="padded-b-0"> {{page.instagram}} </p>
+      <p class="padded-b-0"> {{page.facebook}} </p>
+    
+    </div>
+      
+      
+      <div class="gallery grid" id="lightgallery">
+  
+        {% for item in page.gallery %}
+              
+        <a class="{{item.column-size}}" href="{{item.background_image}}"> 
+          <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        </a>
+      
+        {% endfor %}
+        
+      </div>
+  
+  </section>

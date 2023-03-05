@@ -1,0 +1,112 @@
+---
+layout: default
+---
+<!-- Intro Banner -->
+<section class="grid">
+
+    {% for item in page.banner %}
+    <div class="{{item.column-size}}"> 
+        <div class="bg-image {{item.aspect-ratio}} {{ item.overlay }}" style="background-image: url('{{item.background_image}}');"> 
+        </div>
+    </div>
+    {% endfor %}
+ 
+ </section>
+
+
+<!--------------- LLAR Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+        <a href="#natur" class="center sticker button button-light button-sm"> Mehr <br /> zur Natur <br /> am Rand </a>
+
+        {% for item in page.llar %}
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <p> {{ item.description }} </p>
+
+        {% endfor %}
+    </div>    
+</section>
+
+
+<!-- Popup Gallery  1 -->
+<section class="center padded-1 capped-width-narrow">
+
+    <div class="gallery grid" id="lightgallery">
+
+        {% for item in page.gallery %}
+            
+        <a class="{{item.column-size}}" href="{{item.background_image}}"> 
+            <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
+            </div>
+        </a>
+        
+        {% endfor %}
+
+    </div>
+</section>
+
+<!--------------- LLAR Section --------------->
+<section class="grid-center-middle padded-1 capped-width">
+
+    <div class="col-9_sm-12">
+
+        {% for item in page.hintergrund %}
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <p> {{ item.description }} </p>
+        {% endfor %}
+    </div>    
+
+</section>
+
+
+<!-- Contact Banner
+<section class="padded-3 center editable bg-light"> 
+    <h3> Nichts mehr verpassen! </h3>
+    <a href="mailto:#" class="button button-nl"> Zum Newsletter anmelden </a>
+</section>  -->
+
+
+<!--------------- NAR Section --------------->
+<section class="grid-center-middle padded-1 capped-width" id="natur">
+
+    <div class="col-9_sm-12">
+
+        {% for item in page.nar %}
+        <h2 class="center {{ item.padded }} "> {{ item.title }} </h2>
+        <p> {{ item.description }} </p>
+    
+        {% endfor %}
+    </div>
+</section>
+    
+    <!-- Gallery 2 -->
+    <section class="center padded-1 capped-width-narrow">
+
+        <div class="gallery grid" id="lightgallery-2">
+    
+            {% for item in page.gallery-two %}
+                
+            <a class="{{item.column-size}}" href="{{item.background_image}}"> 
+                <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> 
+                </div>
+            </a>
+            
+            {% endfor %}
+    
+        </div>
+    </section>
+
+    <!--------------- NAR Section Weiterführung --------------->
+<section class="grid-center-middle padded-1 capped-width">
+
+    <div class="col-9_sm-12">
+
+        {% for item in page.nuetzling %}
+        <h3 class="center"> {{ item.title }} </h3>
+        <p> {{ item.description }} </p>
+        
+        {% endfor %}
+    </div>    
+
+</section>

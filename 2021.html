@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: gallerie
 seo:
   title: LIEDERLAUSCHEN am Rand - 2022
   description: >-
@@ -126,43 +126,3 @@ gallery:
     aspect-ratio: square
     background_image: /galerie/2021/2021_65.jpg
 ---
-<!-- Intro Banner 
-<section class="grid">
-
-    {% for item in page.banner %}
-    <div class="{{item.column-size}}"> 
-        <div class="bg-image {{item.aspect-ratio}} {{ item.overlay }}" style="background-image: url('{{item.background_image}}');"> 
-        </div>
-    </div>
-    {% endfor %}
- 
- 
--->
-
-<!-- Gallery -->
-<section class="padded padded-t-1 capped-width-narrow">
-  <div class="padded-05">
-
-    <h1 class="bold center">{{ page.title }}</h1>
-    <h2 class="center"> {{page.sub-heading}} </h2>
-    <p class="padded-b-0"> {{page.description}} </p>
-    <p class="padded-b-0"> {{page.credit}} </p>
-    <p class="padded-b-0"> {{page.instagram}} </p>
-    <p class="padded-b-0"> {{page.facebook}} </p>
-  
-  </div>
-    
-    
-    <div class="gallery grid" id="lightgallery">
-
-      {% for item in page.gallery %}
-            
-      <a class="{{item.column-size}}" href="{{item.background_image}}"> 
-        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
-      </a>
-    
-      {% endfor %}
-      
-    </div>
-
-</section>

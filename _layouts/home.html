@@ -1,0 +1,131 @@
+---
+layout: default
+---
+<!-- Intro Banner -->
+{% for item in page.banner %}
+<section class="grid padded bg-image {{ item.overlay }} tall-80" style="background-image: url('{{item.background_image}}');">
+{% endfor %}
+
+    <div class="col-12-middle center padded-1">
+        <p class="editable"> </p>
+        <p class="padded-2 editable">
+            
+        </p>
+        <a href="/tickets" class="button button-tickets editable"> Tickets </a>
+    </div>
+</section>
+
+
+<!--------------- LLAR Section --------------->
+<section class="grid-center-middle capped-width">
+    <div class="col-9_sm-12 padded padded-t-1">
+      
+      {% for item in page.llar%}
+        <h1 class="bold center">{{ item.title }}</h1>
+        <h2 class="center"> {{ item.subtitle}} </h2>
+      
+      {% endfor %}
+
+      {% for item in page.text%}
+
+      <p class="padded-t-1"> {{item.description}} </p>
+
+      {% endfor %}
+
+      <div class="center">
+        <a class="button button-light editable" href="/idee">Weiterlesen</a>
+      </div>
+        
+    </div>
+</section>
+
+
+
+<!--------------- PAR Section --------------->
+{% for item in page.programm %}
+<section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay" style="background-image: url('{{item.background_image}}');">
+
+    <div class="col-9_sm-12-bottom center padded white">
+        <h2 class="white">{{ item.title }}</h2>
+        <p class="white bg-text">{{ item.description }}</p>
+        
+        {% endfor %}
+
+        <a class="button editable" href="/programm">Weiterlesen</a>
+    </div>
+</section>
+
+
+<!-- Gallery -->
+<section class="center padded capped-width-narrow">
+    <h2> Impressionen vom Rand </h2>
+    <div class="gallery grid" id="lightgallery">
+
+      {% for item in page.gallery %}
+            
+      <a class="{{item.column-size}}" href="{{item.background_image}}"> 
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+      </a>
+    
+      {% endfor %}
+      
+    </div>
+
+</section>
+
+
+<!--------------- NAR Section --------------->
+{% for item in page.natur %}
+<section class="grid-center-middle padded-1 tall-70 bg-image bg-overlay" style="background-image: url('{{item.background_image}}');">
+
+  <section class="capped-width">
+    <div class="col-9_sm-12-bottom center padded white">
+      <h2 class="white">{{ item.title }}</h2>
+      <p class="white bg-text"> {{ item.description }} </p>
+
+      {% endfor %}
+
+      <a class="button editable" href="/idee">Weiterlesen</a>
+  </div>
+  </section>
+
+    
+</section>
+
+
+<!------------------------ Featured blog loop 
+<section class="padded bg-dark">
+
+  <div class="capped-width grid-center">
+
+      <div class="col-12 padded-1 center margin-b-1">
+          <h2> {{ page.blog-header }} 
+          <p class="editable"> {{ page.blog-text }}</p>
+      
+
+      {% assign featured_posts = site.posts | where: 'featured', true %}
+
+      {% for post in featured_posts limit:3 %}
+
+          <div class="col-4_sm-6_xs-12 padded-1">
+              <a href="{{ post.url }}">
+                <div class="bg-image-blog square post-item" style="background-image:url('{{ post.featured_image }}')"> </div>
+              </a>
+              <div class="padded-t-1">
+                  
+                  {% for item in post.categories %}
+                      <span class="tag"> {{item}} </span>
+                  {% endfor %}
+
+                  <h3 class="margin-t-1"> {{ post.title }} </h3>
+                  <p> {{ post.description }} </p>
+                  <a href="{{ post.url }}" class="subtle-button post-item"> Read More </a>
+
+              </div>
+          </div>
+
+      {% endfor %}
+
+  
+  
+------------------------>

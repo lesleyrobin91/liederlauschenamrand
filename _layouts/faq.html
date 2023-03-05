@@ -1,0 +1,49 @@
+---
+layout:  default
+---
+<!-- Intro Banner -->
+<section class="grid">
+
+    {% for item in page.banner %}
+    <div class="{{item.column-size}}"> 
+        <div class="bg-image {{item.aspect-ratio}} {{ item.overlay }}" style="background-image: url('{{item.background_image}}');"> 
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
+<!-- Intro Text -->
+<section class="capped-width-narrow grid">
+    {% for item in page.intro %}
+    <div class="col-12 padded-1">
+        <h1 class="bold padded-b-1 center"> {{ item.headline }} </h1>
+        <h2 class="center"> {{ item.title }} </h2>
+        <p> {{ item.description }} </p>
+    </div>
+    {% endfor %}
+
+<!-- FAQ -->
+    <div class="col-9_md-8_xs-12 padded-1">
+      
+      {% for item in page.faq%}
+
+         <h3 id="{{ item.topic }}">{{ item.topic }}</h3>
+         <p class="padded-t-1"> {{item.description}} </p>
+
+      {% endfor %}
+
+        <p class="editable">Weitere Fragen rund um Organisatorisches werden wir hier sobald wie m&ouml;glich erg&auml;nzen. Bis dahin euch allen eine gute Zeit!</p>
+        <p class="editable">Euer LiederLauschen Team</p>
+    </div>
+
+
+<!-- Sidebar -->
+    <div class="col-3_md-4_xs-12 padded-1 faq-nav">
+            <h3> Auf einen Blick: </h3>
+        {% for item in page.faq %}
+            <a href="#{{ item.topic }}"> {{ item.topic }} </a>
+        {% endfor %}
+        
+    </div>
+</section>
