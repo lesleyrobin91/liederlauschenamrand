@@ -7,12 +7,74 @@
     </head>
     <body> 
 
+        {% if page.language == "polish" %}
         <!-- Header -->
         <header class="grid padded-b-1 padded-t-1"> 
-            <div class="col-5_sm-3_xs-12-middle">
+            <div class="col-2_xs-3-middle">
                 <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo" /> </a>
             </div>
-            <ul class="col-7_sm-9-middle mob-hide padded-0 right">
+            
+            <!-- Polish version -->
+            <div class="col-3_sm-6-middle"> 
+                <a href="{{ page.url | replace: '/pl/',  '/' }}"> DE </a>
+            </div>
+
+            <ul class="col-7_sm-3-middle mob-hide padded-0 right">
+                <li> <a href="#contact"> Anfahrt </a> </li>
+                <li> <a href="/pl/tickets"> Bilety </a> </li>
+                <li> <a href="/pl/news"> News </a> </li>
+                <li> <a href="/pl/idee"> Idea </a> </li>
+                <li class="dropdown"> 
+                    <a href="javascript:void(0)" class="dropbtn"> Galeria </a> 
+                    <div class="dropdown-content">
+                        <a href="/pl/2019"> 2019 </a>
+                        <a href="/pl/2020"> 2020 </a>
+                        <a href="/pl/2021"> 2021 </a>
+                        <a href="/pl/2022"> 2022 </a>
+                    </div>
+                </li>
+                <li> <a href="/pl/programm"> Program </a> </li>
+            </ul>
+
+            <div class="col-6 right">
+                <a class="hamburger-button mob-show"> &#9776; </a>
+            </div>
+
+            <div>
+                <ul class="mobile-menu">
+                    <li> <a href="/pl/programm"> Program </a> </li>
+                    <li class="dropdown"> 
+                        <a href="javascript:void(0)" class="dropbtn"> Galeria </a> 
+                        <div class="dropdown-content"> 
+                            <a href="/pl/2019"> 2019 </a>
+                            <a href="/pl/2020"> 2020 </a>
+                            <a href="/pl/2021"> 2021 </a>
+                            <a href="/pl/2022"> 2022 </a>
+                        </div>
+                    </li>
+                    <li> <a href="/pl/idee"> Idea </a> </li>
+                    <li> <a href="/pl/news"> News </a> </li>
+                    <li> <a href="/pl/tickets.html"> Bilety </a> </li>
+                    <li> <a href="/#contact"> Anfahrt </a> </li>
+                </ul>
+            </div>
+
+            </header>
+
+        {% else %}
+
+
+            <!-- German version -->
+        <header class="grid padded-b-1 padded-t-1"> 
+            <div class="col-2_xs-3-middle">
+                <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo" /> </a>
+            </div>
+
+            <div class="col-3_sm-6-middle"> 
+                <a href="/pl{{ page.url }}"> PL </a>
+            </div>
+
+            <ul class="col-7_sm-3-middle mob-hide padded-0 right">
                 <li> <a href="#contact"> Anfahrt </a> </li>
                 <li> <a href="/tickets"> Tickets </a> </li>
                 <li> <a href="/news"> News </a> </li>
@@ -52,6 +114,8 @@
                 </ul>
             </div>
         </header>
+
+        {% endif %}
 
         {{ content }}
 
@@ -131,9 +195,21 @@
             <div class="col-6-middle right padded-t-1 mob-footer">
                 <p class="subtle"> Copyright 2022 </p>
             </div>
+
+            {% if page.language == "polish" %}
+
+            <div class="col-4_sm-6 padded-t-1 mob-footer">
+                <p> <a href="/pl/impressum"> Nadruk </a></p>
+            </div>
+
+            {% else %}
+
             <div class="col-4_sm-6 padded-t-1 mob-footer">
                 <p> <a href="/impressum"> Impressum und Datenschutz </a></p>
             </div>
+            
+            {% endif %}
+
             <div class="col-2_sm-12-middle right padded-t-1 mob-footer mob-center">
                 <p> Design by <a href="https://lesleyrudolph.com" target="_blank" class="padded-0"> L2R </a></p>
             </div>
