@@ -33,14 +33,14 @@ layout:  default
 
       {% endfor %}
 
-        <p class="editable">Weitere Fragen rund um Organisatorisches werden wir hier sobald wie m&ouml;glich erg&auml;nzen. Bis dahin euch allen eine gute Zeit!</p>
-        <p class="editable">Euer LiederLauschen Team</p>
+        <p class="editable"> {{page.finish}} </p>
+        <p class="editable"> {{page.greeting}} </p>
     </div>
 
 
 <!-- Sidebar -->
     <div class="col-3_md-4_xs-12 padded-1 faq-nav">
-            <h3> Auf einen Blick: </h3>
+            <h3> {{page.summary-heading}} </h3>
         {% for item in page.faq %}
             <a href="#{{ item.topic }}"> {{ item.topic }} </a>
         {% endfor %}

@@ -660,7 +660,7 @@ form label{
 
 /* ---------- SM Media Query (768px) ---------- */ 
 
-@media (max-width: 48em) {
+@media (max-width: 52em) {
     .mob-padded-0 {
             padding: 0;
         }
@@ -684,6 +684,8 @@ form label{
     .mob-footer { font-size: 0.9rem; }
     .mob-center { text-align: center; }
     .mob-padded { padding: 0.5rem 2rem; }
+
+    .mobile-narrower { left: 80%; }
     
     #mob-height {  min-height: 70vw; }
 
@@ -713,6 +715,8 @@ form label{
     .xs-vertical { right: 30%; }
 
     .xs-other { right: -33%; }
+
+    #mobile-wider { left: 70%; }
 
 }
 

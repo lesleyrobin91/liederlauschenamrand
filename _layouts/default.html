@@ -10,17 +10,17 @@
         {% if page.language == "polish" %}
         <!-- Header -->
         <header class="grid padded-b-1 padded-t-1"> 
-            <div class="col-2_xs-3-middle">
+            <div class="col-1_md-3_sm-4-middle">
                 <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo" /> </a>
             </div>
             
             <!-- Polish version -->
-            <div class="col-3_sm-6-middle"> 
+            <div class="col-3_md-1_sm-4-middle center"> 
                 <a href="{{ page.url | replace: '/pl/',  '/' }}"> DE </a>
             </div>
 
-            <ul class="col-7_sm-3-middle mob-hide padded-0 right">
-                <li> <a href="#contact"> Anfahrt </a> </li>
+            <ul class="col-8-middle mob-hide padded-0 right">
+                <li> <a href="#contact"> Przyjazd </a> </li>
                 <li> <a href="/pl/tickets"> Bilety </a> </li>
                 <li> <a href="/pl/news"> News </a> </li>
                 <li> <a href="/pl/idee"> Idea </a> </li>
@@ -41,7 +41,7 @@
             </div>
 
             <div>
-                <ul class="mobile-menu">
+                <ul class="mobile-menu mobile-narrower" id="mobile-wider">
                     <li> <a href="/pl/programm"> Program </a> </li>
                     <li class="dropdown"> 
                         <a href="javascript:void(0)" class="dropbtn"> Galeria </a> 
@@ -55,7 +55,7 @@
                     <li> <a href="/pl/idee"> Idea </a> </li>
                     <li> <a href="/pl/news"> News </a> </li>
                     <li> <a href="/pl/tickets.html"> Bilety </a> </li>
-                    <li> <a href="/#contact"> Anfahrt </a> </li>
+                    <li> <a href="/#contact"> Przyjazd </a> </li>
                 </ul>
             </div>
 
@@ -66,15 +66,15 @@
 
             <!-- German version -->
         <header class="grid padded-b-1 padded-t-1"> 
-            <div class="col-2_xs-3-middle">
+            <div class="col-1_md-3_sm-4-middle">
                 <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo" /> </a>
             </div>
 
-            <div class="col-3_sm-6-middle"> 
+            <div class="col-3_md-1_sm-4-middle center"> 
                 <a href="/pl{{ page.url }}"> PL </a>
             </div>
 
-            <ul class="col-7_sm-3-middle mob-hide padded-0 right">
+            <ul class="col-8-middle mob-hide padded-0 right">
                 <li> <a href="#contact"> Anfahrt </a> </li>
                 <li> <a href="/tickets"> Tickets </a> </li>
                 <li> <a href="/news"> News </a> </li>
@@ -96,7 +96,7 @@
             </div>
 
             <div>
-                <ul class="mobile-menu">
+                <ul class="mobile-menu mobile-narrower" id="mobile-wider">
                     <li> <a href="/programm"> Programm </a> </li>
                     <li class="dropdown"> 
                         <a href="javascript:void(0)" class="dropbtn"> Galerie </a> 
@@ -121,12 +121,18 @@
 
         <!-- Contact Banner -->
         <section class="padded-3 center editable bg-light">
-            <h3>Nichts mehr verpassen!</h3>
+            
+            {% if page.language == "polish" %}
+            <h3> Nie przegap już niczego! </h3>
+            {% else %}
+            <h3> Nichts mehr verpassen! </h3>
+            {% endif %}
+
             <!--base32-MJQXGZJTGIWUKQSCI5FVUM2KJZMVCRJSLFGEUTSSKJLVCMSMJZHUCUKGI4ZEYSCOLIZFQQKJINDU4NK2I4ZESQJ5FVRGC43FGMZA====-base32-->
             <div>
                 <form action="https://liederlauschen.us20.list-manage.com/subscribe/post?u=8e644e126636bdb2289e9803e&amp;id=0c2b60dcbb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
                     <div id="mc_embed_signup_scroll">
-                        <div class="mc-field-group"><label for="mce-EMAIL">Email Addresse <span class="asterisk">*</span> </label> <input type="email" value="" class="required email" id="mce-EMAIL" aria-required="true" name="EMAIL" /></div>
+                        <div class="mc-field-group"><label for="mce-EMAIL">Email <span class="asterisk">*</span> </label> <input type="email" value="" class="required email" id="mce-EMAIL" aria-required="true" name="EMAIL" /></div>
                         <div hidden="true"><input type="hidden" value="95601" name="tags" /></div>
                         <div id="mce-responses" class="clear foot">
                             <div class="response" id="mce-error-response" style="display:none"> </div>
@@ -169,7 +175,45 @@
         <!-- footer -->
         <footer class="grid-center padded-1 padded-b-0 bg-dark" id="contact">
             <div class="col-7_sm-12 center padded-1">
-                <h3> Folgt uns und feiert mit uns! </h3>
+                
+                <!-- Polisch version -->
+                {% if page.language == "polish" %}
+
+                <h3> Śledź nas i świętuj z nami! </h3>
+                <nav> 
+                    <a href="mailto:liederlauschenamrand@gmail.com"> <i class="fas fa-envelope"></i> </a>
+                    <a href="https://www.instagram.com/liederlauschen/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                    <a href="https://www.facebook.com/LiederLauschen/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+                </nav>
+                <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo-footer" /> </a>
+            </div>
+            <div class="col-5_sm-12 padded-1 center-sm">
+                <h3 class="editable padded-b-1">
+                    Adres!&nbsp;
+                </h3>
+                <p class="editable">
+                    Theater am Rand<br />Zollbr&uuml;cke 16, 16259 Oderaue
+                </p>
+                <a href="https://www.google.com/maps/place/Zollbr%C3%BCcke+16,+16259+Oderaue/@52.7880407,14.2436652,15.96z/data=!4m5!3m4!1s0x47a9d8cdf17dc6bd:0x38dddcc118c428d8!8m2!3d52.787323!4d14.2478661" target="_blank" class="google editable"> Google Maps</a>
+                <p class="editable">
+                    Więcej informacji o tym, jak się tu dostać, można znaleźć tutaj <a href="/news.html" target="_blank" rel="noopener" class="google"> News </a>
+                </p>
+                <p class="editable">
+                    Liederlauschen am Rand to wydarzenie organizowane przez Braumeister e.V. i Lea Events & Artists we współpracy z Theatre am Rand.
+                </p>
+            </div>
+            <div class="col-6-middle right padded-t-1 mob-footer">
+                <p class="subtle"> Copyright 2022 </p>
+            </div>
+
+            <div class="col-4_sm-6 padded-t-1 mob-footer">
+                <p> <a href="/pl/impressum"> Nadruk </a></p>
+            </div>
+
+            <!-- German version -->
+            {% else %}
+
+            <h3> Folgt uns und feiert mit uns! </h3>
                 <nav> 
                     <a href="mailto:liederlauschenamrand@gmail.com"> <i class="fas fa-envelope"></i> </a>
                     <a href="https://www.instagram.com/liederlauschen/" target="_blank"> <i class="fab fa-instagram"></i> </a>
@@ -184,7 +228,7 @@
                 <p class="editable">
                     Theater am Rand<br />Zollbr&uuml;cke 16, 16259 Oderaue
                 </p>
-                <a href="https://www.google.com/maps/place/Zollbr%C3%BCcke+16,+16259+Oderaue/@52.7880407,14.2436652,15.96z/data=!4m5!3m4!1s0x47a9d8cdf17dc6bd:0x38dddcc118c428d8!8m2!3d52.787323!4d14.2478661" target="_blank" class="google editable"> Zu Google Maps</a>
+                <a href="https://www.google.com/maps/place/Zollbr%C3%BCcke+16,+16259+Oderaue/@52.7880407,14.2436652,15.96z/data=!4m5!3m4!1s0x47a9d8cdf17dc6bd:0x38dddcc118c428d8!8m2!3d52.787323!4d14.2478661" target="_blank" class="google editable"> Google Maps</a>
                 <p class="editable">
                     Weitere Infos zur Anreise findet ihr unter<a target="_blank" rel="noopener" href="/news.html">News</a>
                 </p>
@@ -195,14 +239,6 @@
             <div class="col-6-middle right padded-t-1 mob-footer">
                 <p class="subtle"> Copyright 2022 </p>
             </div>
-
-            {% if page.language == "polish" %}
-
-            <div class="col-4_sm-6 padded-t-1 mob-footer">
-                <p> <a href="/pl/impressum"> Nadruk </a></p>
-            </div>
-
-            {% else %}
 
             <div class="col-4_sm-6 padded-t-1 mob-footer">
                 <p> <a href="/impressum"> Impressum und Datenschutz </a></p>
