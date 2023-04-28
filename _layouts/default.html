@@ -1,5 +1,15 @@
 <!DOCTYPE html>
-<html>
+
+{% if page.language == "polish" %}
+
+<html lang="pl">
+
+{% else %}
+
+<html lang="de">
+
+{% endif %}
+    
     <head>
 
         {% include head.html %}
