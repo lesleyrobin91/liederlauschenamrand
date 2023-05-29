@@ -50,20 +50,23 @@ layout: default
     </div> 
     -->
  
-    {% for item in page.rueckblick %}
+   {% for item in page.rueckblick %}
     <div class="padded-1">
        <h2 class="center"> {{ item.title }} </h2>
        <p> {{ item.description }} </p>
     </div>
-    {% endfor %}
+   {% endfor %}
+
+   
  
    <div class="portfolio-filter center padded-b-1" id="portfolio-filter">
-     <span>Alle Tage</span> /
-     <span>Freitag</span> /
-     <span>Samstag</span> /
-     <span>Sonntag</span> 
+         <span>Alle Tage</span> /
+         <span>Freitag</span> /
+         <span>Samstag</span> /
+         <span>Sonntag</span> 
    </div>
  
+
    <div class="grid-center margin-b-2 filterable-gallery" id="filterable-gallery">
          
      {% for item in page.bands %}
@@ -87,7 +90,7 @@ layout: default
      {% for item in page.header %}
      <div class="col-12 center padded-b-1">
          <h2 class="editable">
-             Workshops am Rand 2023
+             Workshops 2023
          </h2>
      </div>
      {% endfor %}
