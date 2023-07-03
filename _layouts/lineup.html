@@ -57,14 +57,25 @@ layout: default
     </div>
    {% endfor %}
 
-   
- 
-   <div class="portfolio-filter center padded-b-1" id="portfolio-filter">
-         <span>Alle Tage</span> /
-         <span>Freitag</span> /
-         <span>Samstag</span> /
-         <span>Sonntag</span> 
+   {% if page.language == "polish" %}
+
+   <div class="portfolio-filter center padded-b-1" id="portfolio-filter-pl">
+      <span>Wszystkie Dni</span> /
+      <span>Piątek</span> /
+      <span>Sobota</span> /
+      <span>Niedziela</span> 
    </div>
+
+   {% else %}
+
+   <div class="portfolio-filter center padded-b-1" id="portfolio-filter">
+      <span>Alle Tage</span> /
+      <span>Freitag</span> /
+      <span>Samstag</span> /
+      <span>Sonntag</span> 
+   </div>
+
+   {% endif %}
  
 
    <div class="grid-center margin-b-2 filterable-gallery" id="filterable-gallery">
