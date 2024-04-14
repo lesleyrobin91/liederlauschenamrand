@@ -184,11 +184,10 @@
 
         <!-- footer -->
         <footer class="grid-center padded-1 padded-b-0 bg-dark" id="contact">
-            <div class="col-7_sm-12 center padded-1">
-                
-                <!-- Polisch version -->
-                {% if page.language == "polish" %}
 
+        <!-- Polisch version -->
+        {% if page.language == "polish" %}
+            <div class="col-7_sm-12 center padded-1">
                 <h3> Śledź nas i świętuj z nami! </h3>
                 <nav> 
                     <a href="mailto:liederlauschenamrand@gmail.com"> <i class="fas fa-envelope"></i> </a>
@@ -212,25 +211,26 @@
                     Liederlauschen am Rand to wydarzenie organizowane przez Braumeister e.V. i Lea Events & Artists we współpracy z Theatre am Rand.
                 </p>
             </div>
-            <div class="col-6-middle right padded-t-1 mob-footer">
+            
+            <div class="col-5_sm-6-middle right padded-t-1 mob-footer">
                 <p class="subtle"> Copyright 2022 </p>
             </div>
 
-            <div class="col-4_sm-6 padded-t-1 mob-footer">
+            <div class="col-2_sm-6 center padded-t-1 mob-footer">
                 <p> <a href="/pl/impressum"> Nadruk </a></p>
             </div>
 
             <!-- German version -->
             {% else %}
-
-            <h3> Folgt uns und feiert mit uns! </h3>
-                <nav> 
-                    <a href="mailto:liederlauschenamrand@gmail.com"> <i class="fas fa-envelope"></i> </a>
-                    <a href="https://www.instagram.com/liederlauschen/" target="_blank"> <i class="fab fa-instagram"></i> </a>
-                    <a href="https://www.facebook.com/LiederLauschen/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
-                </nav>
+            <div class="col-7_sm-12 center padded-1">
+                <h3> Folgt uns und feiert mit uns! </h3>
+                    <nav> 
+                        <a href="mailto:liederlauschenamrand@gmail.com"> <i class="fas fa-envelope"></i> </a>
+                        <a href="https://www.instagram.com/liederlauschen/" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.facebook.com/LiederLauschen/" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+                    </nav>
                 <a href="/"> <img src="/images/Theater.png" alt="liederlauschen am rand logo" class="logo-footer" /> </a>
-            
+            </div>
             <div class="col-5_sm-12 padded-1 center-sm">
                 <h3 class="editable padded-b-1">
                     Adresse!&nbsp;
@@ -246,18 +246,19 @@
                     Liederlauschen am Rand ist eine Veranstaltung von Braumeister e.V. und Lea Events &amp; Artists, in Kooperation mit dem Theater am Rand.
                 </p>
             </div>
-            <div class="col-6-middle right padded-t-1 mob-footer">
+
+            <div class="col-5_sm-6-middle right padded-t-1 mob-footer">
                 <p class="subtle"> Copyright 2022 </p>
             </div>
 
-            <div class="col-4_sm-6 padded-t-1 mob-footer">
-                <p> <a href="/impressum"> Impressum und Datenschutz </a></p>
+            <div class="col-2_sm-6 center padded-t-1 mob-footer">
+                <p> <a href="/impressum"> Impressum </a></p>
             </div>
             
             {% endif %}
 
-            <div class="col-2_sm-12-middle right padded-t-1 mob-footer mob-center">
-                <p> Design by <a href="https://lesleyrudolph.com" target="_blank" class="padded-0"> L2R </a></p>
+            <div class="col-5_sm-12-middle padded-t-1 mob-footer mob-center">
+                <p> <a href="https://lesleyrudolph.com" target="_blank" class="padded-0"> Design by L2R </a></p>
             </div>
         </footer>
 
