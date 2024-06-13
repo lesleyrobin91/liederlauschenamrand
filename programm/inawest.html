@@ -13,8 +13,8 @@ llar:
     column-size: col-12
     aspect-ratio: tall-60
     background_image: /images2024/programm/01_inawest.jpg
-    padded: padded-1
     button-lesen: Mehr zu Ina West
+    button-back: Zurück zur Übersicht
 ---
  <!--------------- Artist Section --------------->
 <section class="grid-center-middle padded-1 parent capped-width">
@@ -27,7 +27,8 @@ llar:
         <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
         <p class="padded-t-1"> {{ item.description }} </p>
         <div class="center padded-b"> 
-          <a class="button button-light center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
         </div>
         
         
