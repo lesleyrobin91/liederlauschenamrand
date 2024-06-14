@@ -1,0 +1,53 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Riders Connection
+    description: >+
+      Ursprünglich aus der Straßenmusik kommend präsentieren die drei Berliner
+      einen Festival- und Clubtauglichen Sound vom Feinsten.
+
+      Das Trio ist bei seinen minimalistischen Mitteln geblieben und performt
+      live mit Human Beatbox (Vocal Percussion), Bass,
+      Gitarre/Gesang/Mundtrompete eine ganz eigene Mischung aus Reggae, Soul und
+      Folk-Blues: Poly Stylistic Heart Music
+
+      Neben zahlreichen Clubtouren und Festivalkonzerten in Deutschland, waren
+      Riders Connection u.a. mehrmals in der Schweiz und Südafrika unterwegs.
+      2017 stand ebenfalls der Senegal auf dem Tourplan.
+
+      Zwischenzeitlich ging jeder der Drei seiner eigenen Wege. Seit letztem
+      Jahr bespielen Sie wieder gemeinsam und magisch wie eh und je die Bühnen. 
+
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/riders-connection-2.jpg
+    button-lesen: Mehr zu Riders Connection
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
