@@ -169,7 +169,6 @@ html {
 
 .landscape {padding-bottom: 60%;}
 .portrait {padding-bottom: 120;}
-.header {padding-bottom: 30%;}
 
 .light-text { color: white; } 
 
@@ -486,6 +485,9 @@ img {
 /* Header + Footer */
 header {
     padding: 2% 5%;
+    background: white;
+    position: sticky;
+    z-index: 5;
 }
 
 /* Links */
@@ -584,6 +586,17 @@ a:hover,
     border-radius: 50px;
     line-height: 1.2rem;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
 
 /* Dropdown Menu NAV */
 ul {
