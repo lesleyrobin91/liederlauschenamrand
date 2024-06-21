@@ -98,15 +98,18 @@ layout: default
     </section>
 
     <!--------------- NAR Section Weiterführung --------------->
-<section class="grid-center-middle padded-1 capped-width">
-
-    <div class="col-9_sm-12">
-
-        {% for item in page.nuetzling %}
-        <h3 class="center"> {{ item.title }} </h3>
-        <p> {{ item.description }} </p>
+<section class="bg-light">
+    <div class="grid-center-middle padded-1 capped-width">
         
-        {% endfor %}
-    </div>    
+        <div class="col-9_sm-12">
+
+            {% for item in page.nuetzling %}
+            <h3 class="center"> {{ item.title }} </h3>
+            <p> {{ item.description }} </p>
+            
+            {% endfor %}
+        </div> 
+    </div>
+       
 
 </section>

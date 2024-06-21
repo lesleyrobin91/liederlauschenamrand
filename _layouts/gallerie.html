@@ -2,7 +2,9 @@
 layout: default
 ---
 <!-- Gallery -->
-<section class="padded padded-t-1 capped-width-narrow">
+<section class="padded padded-t-1 bg-light">
+  
+  <div class="capped-width-narrow">
     <div class="padded-05">
   
       <h1 class="bold center">{{ page.title }}</h1>
@@ -12,19 +14,19 @@ layout: default
       <p class="padded-b-0"> {{page.instagram}} </p>
       <p class="padded-b-0"> {{page.facebook}} </p>
     
-    </div>
+    </div>      
       
-      
-      <div class="gallery grid" id="lightgallery">
+    <div class="gallery grid" id="lightgallery">
   
-        {% for item in page.gallery %}
+      {% for item in page.gallery %}
               
-        <a class="{{item.column-size}}" href="{{item.background_image}}"> 
-          <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
-        </a>
+      <a class="{{item.column-size}}" href="{{item.background_image}}"> 
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+      </a>
       
-        {% endfor %}
+      {% endfor %}
         
-      </div>
-  
-  </section>
+    </div>
+  </div> 
+
+</section>
