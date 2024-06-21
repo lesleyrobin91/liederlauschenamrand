@@ -115,8 +115,6 @@
     box-sizing: border-box;
 }
 
-img { max-width: 100%; height: auto; }
-
 /* because Gridlex adds a negative space to the grids and depending on the design this can be quirky */
 [class*=grid] { margin:0; }
 [class*=col] { padding:0; }
@@ -323,6 +321,16 @@ p:last-child {
 }
 
 /* images */ 
+img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.img-logo {
+    max-width: 70%;
+    height: auto;
+}
+
 .bg-image{
     background-color: #F9F7F3;
     background-size: cover;
@@ -718,6 +726,10 @@ form label{
 
     #mobile-wider { left: 70%; }
 
+    .img-logo {
+        max-width: 50%;
+        height: auto;
+    }
 }
 
 /* ---------- XXS Media Query (376px) ---------- */ 
