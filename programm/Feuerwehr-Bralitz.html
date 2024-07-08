@@ -1,0 +1,46 @@
+---
+layout: default
+seo:
+ title: LIEDERLAUSCHEN am Rand - Feuerwehr Bralitz
+ description: Liederlauschen am Rand steht für gemeinsames Erleben.
+ social_image: /images_impressionen/imp_01.jpg
+ keywords: liederlauschen am rand
+ hide-from-google: false
+llar:
+ -
+  headline: WORKSHOPS AM RAND
+  title: Historische Feuerwehr Bralitz
+  description: >-
+   Unsere Freunde der ersten Stunde- die Freiwillige Feuerwehr Bralitz - wird
+   auch in diesem Jahr mit der historischen Handdruckspritze aus dem Jahr 1904
+   zum  Liederlauschen am Rand reisen. Mit 1000 Litern Wasser sorgen Sie für
+   freudigste Abkühlung. Nicht nur das! Es wird auch eine Vorführung geben, bei
+   der alle Interessierten selbst mit anpacken und erfahren können, wie
+   schweißtreibend die Arbeit der Feuerwehr um 1900 war. Die Männer der
+   Feuerwehr kommen selbst in historischen Uniformen, wie sie um 1900 von der
+   Feuerwehr getragen wurde. Aber keine Angst, preußisch wird es hier definitiv
+   nicht zugehen ;-).
+  column-size: col-12
+  aspect-ratio: tall-60
+  background_image: /uploads/lar-23-sideprogram-033-kopie.jpg
+  button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
