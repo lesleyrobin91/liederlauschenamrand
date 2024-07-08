@@ -1,0 +1,63 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: TANT FREAKY
+    description: >-
+      PSYCHOSOUL, ELEKTROJUNGLEJAZZSOUL, NEOHIPPIE, SCHAMANISCHER JAZZ,
+      ENERGIZING GROOVE und VOCAL SPIRAL 
+
+      Mit Leidenschaft für Musik und Ausdruck kreieren sie seit Ende 2019 in
+      Wrocław, wo ihre künstlerische Reise im tantrischen Percussion-Workshop
+      von Wiktor Golec begann.
+
+      2022 veröffentlichten sie ihr erstes Album, "Theory of Love".
+
+      Für sie ist das Schaffen und Teilen von Musik eine Therapie und ein Weg,
+      um glücklich zu sein. Sie übernehmen alles selbst: vom Komponieren,
+      Aufnehmen und Abmischen der Songs bis hin zum Drehen und Schneiden der
+      Musikvideos. Die Gruppe besteht aus fünf farbenfrohen Persönlichkeiten,
+      die sich zu einem Bewusstseinsstrom vereinen, den sie einfach TANTFREAKY
+      nennen.
+
+      Sie treten auf Jazzfestivals auf – im Schlamm und in Salons – überall
+      dort, wo neuer Sound und emotionale Tiefe gefragt sind. Ihre Shows sind
+      ein Erlebnis für Ohren, Augen, Körper (wildes Tanzen inklusive) und Seele.
+
+      2021 spielten sie beim Frutamaniana Festival, Pestka Avantgarde Theaters
+      Festival, Summer Vibes, Source Festival, Fruń Festival, NowoBrzmienia
+      Festival, Theatersymposium in Bautzen, Jazz Festival von Victor Young in
+      Mława und vielen anderen Veranstaltungen. 2022 wurden sie zu den Jazz
+      Junior Finalisten gekürt.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/tantfreaky-bild-1.png
+    button-lesen: Mehr zu TANT FREAKY
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
