@@ -1,0 +1,68 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Oder Talks
+  description: Liederlauschen am Rand steht für gemeinsames Erleben.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: WORKSHOPS AM RAND
+    title: OderTalks
+    description: >-
+      Rainald Grebe, ein Headliner des Liederlauschen Festivals 2024, bringt im
+      Song „Brandenburg“ den arroganten Berliner Blick auf das weite Umland auf
+      den Punkt. Vielen gilt es als Naherholungsgebiet, über den eigenwilligen
+      Menschenschlag lächelt man. Aber stimmt das noch so? Berliner ziehen aufs
+      Land, Polen arbeiten in Deutschland und andersherum, Künstler arbeiten
+      stadt-land-übergreifend und die Oder ist heute weniger Grenze als Ader
+      eines gemeinsamen Kulturraumes. Was macht diesen aus?
+
+
+      In den Jurten der ODER TALKS bringen Limited blindness und das
+      Liederlauschen Festival im Theater am Rand Experten des Alltags,
+      Spezialisten unserer Themenschwerpunkte und alle Interessierte zusammen,
+      um im offenen Austausch den Kultur-Natur-Raum um die Oder auf die Bühne zu
+      hieven – umrahmt von Weinproben, Filmbeiträgen, Performances.
+
+      Kuration: Heiko Michels
+
+      TALKS 
+
+      Freitag: Stadt ~ ODER ~ Land   
+
+      Verflüssigungen urbaner und ländlicher Räume & Kulturpraxis
+
+      Samstag: Kanal ODER Biosphäre ~ Fisch ODER Schiff  
+
+      Widersprüchliche Blicke, Begehren und Festschreibungen an ein
+      Fließgewässer
+
+      Samstag: Alles fließt, ODER? Weinseminar…   und Gespräch über Genusskultur
+      beidseitig der Oder
+
+      Sonntag: Polnisch ODER Deutsch? Fluide Biografien im Grenzbereich
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/rauchern.png
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
