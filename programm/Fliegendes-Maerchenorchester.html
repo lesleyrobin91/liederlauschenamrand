@@ -1,0 +1,57 @@
+---
+layout: default
+seo:
+ title: LIEDERLAUSCHEN am Rand - Fliegendes Märchenorchester
+ description: Liederlauschen am Rand steht für gemeinsames Erleben.
+ social_image: /images_impressionen/imp_01.jpg
+ keywords: liederlauschen am rand
+ hide-from-google: false
+llar:
+ -
+  headline: WORKSHOPS AM RAND
+  title: Fliegendes Märchenorchester
+  description: >1-
+    Das weltberühmte fliegende Märchenorchester reist durch das Land und bringt Märchen und Musik zu allen, die Märchen und Musik hören wollen.
+
+   Diesmal ist allerdings etwas schiefgegangen: Das Orchester ist verschwunden!
+   Nur einer der Darsteller hat es zum Spielort geschafft! Was noch schlimmer
+   ist: Die Instrumente für den Auftritt sind an eine ganz falsche Adresse
+   geliefert worden! Aber was bleibt dem letzten verbliebenen Mitglied des
+   legendären fliegenden Märchenorchesters anderes uübrig, als mutig auf die
+   Bühne zu steigen – allein?
+
+
+   Mit Hilfe der kleinen Zuschauer findet der schauspielernde Musiker-Sänger
+   heraus, wie man die Show trotzdem retten kann: Die Kinder müssen ihm
+   beistehen! Mit Mut, Improvisationslust und ganz viel Musik rocken alle
+   gemeinsam den Saal. Ein Erfolg, den Schauspieler und Zuschauer gemeinsam
+   geschaffen haben! Denn das Märchenorchester kann nur fliegen, wenn wir alle
+   zusammenhalten …
+
+   Es spielt: Florian Wandel
+
+   ab 3 Jahren, Spielzeit 50 min, Mitmach-Musik-Theater 
+  column-size: col-12
+  aspect-ratio: tall-60
+  background_image: /uploads/lar-23-sideprogram-105-kopie.jpg
+  button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
