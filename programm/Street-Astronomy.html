@@ -1,0 +1,60 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Street AstronomyWorkshop
+  description: Liederlauschen am Rand steht für gemeinsames Erleben.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: WORKSHOPS AM RAND
+    title: Street Astronomy Workshop
+    description: >2-
+       „Street Astronomy „bedeutet, dass man sein Teleskop an einen öffentlichen Ort mitbringt, um den Menschen zu zeigen, wie der Rest des Universums aussieht. Es ist ein einfaches Konzept mit einer großen Wirkung. Warum? 99 % der Menschen haben noch nie ein Teleskop benutzt. In einer Welt, die von Lichtern umgeben ist, haben wir den Kontakt zum Nachthimmel verloren.
+
+      Die Straßenastronomie wurde von einem Mönch namens John Dobson populär
+      gemacht. In den 1930er Jahren, nachdem er als Chemiker am
+      Manhattan-Projekt gearbeitet hatte, trat Dobson in ein Kloster ein. Er
+      wurde mit der Aufgabe betraut, die Veden, ihren heiligen Text, mit den
+      Entdeckungen der modernen Astronomie zu verbinden: die Vorstellung, dass
+      es Milliarden von Galaxien gibt und dass sich das Universum ausdehnt.
+      Dobson beschloss, dass er sich zunächst selbst ein Bild machen sollte. Als
+      es ihm gelang, ein neuartiges Teleskop aus Gartengeräten zu bauen, warf er
+      einen Blick auf die Krater des Mondes und dachte: "Heilige Kuh, das muss
+      jeder sehen."
+
+
+      Er begann, sich aus dem Kloster zu schleichen und sein Teleskop an eine
+      Straßenecke in Sacramento zu bringen. Leider glaubten ihm die anderen
+      Mönche nicht, dass er das nachts tat, also warfen sie ihn aus dem Kloster,
+      und er gründete die Sidewalk Astronomers.
+
+
+      Wenn wir die Milchstraße wieder vom Stadtzentrum aus sehen wollen, müssen
+      wir die Menschen zunächst daran erinnern, dass der Nachthimmel noch
+      existiert. Kommen Sie mit uns auf diese Reise, um die Stadt wieder mit dem
+      Nachthimmel zu verbinden und die Lichtverschmutzung zu bekämpfen.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/img-3328-2048x1365.jpg
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
