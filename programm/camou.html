@@ -1,0 +1,49 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Camou
+    description: >-
+      Die Band camou spielt seit 2012 an allen möglichen und unmöglichen Orten
+      und überrascht die Zuhörer mit Geräuschinstallationen, die sich dem
+      elektroakustischen (Offbeat)-Pop zuordnen lassen. Die Geschichte von camou
+      beginnt in einem Unterstand der S-Bahn-Haltestelle Rostock-Marienehe. Nur
+      mäßig vor Wind und Wetter geschützt und den vorbeifahrenden S-Bahnen zum
+      Trotz, wurden in diesem kreativen Refugium die ersten Stücke geformt.
+      Prägten zu dieser Zeit noch Reggae- und Balkaneinflüsse das Schaffen der
+      beiden Recken, lernten sie zunehmend den Delay-Regler einzusetzen
+      (aufzudrehen) und Synthesizertasten zu drücken. Mit dieser neuen Quelle
+      der Inspiration gelangten sie dem Anfang des Regenbogens wieder ein Stück
+      näher.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /images2024/programm/04_camou.jpg
+    button-lesen: Mehr zu Camou
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
