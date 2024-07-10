@@ -1,0 +1,52 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Remigiusz Borda
+    description: >-
+      Wir freuen uns, den deutsch-polnischen Sänger und Maler Remigiusz Borda
+      auf unserem Festival begrüßen zu dürfen! 
+
+      Remigiusz ist ein einzigartiger Künstler, der die Grenzen zwischen Malerei
+      und Musik mühelos verschwimmen lässt. Inspiriert von Werken wie den
+      Skulpturen des deutschen Malers Georg Baselitz, verarbeitet er seine
+      Empfindungen musikalisch und schafft so eine einzigartige Verbindung
+      zwischen Kunst und Musik. 
+
+      Seine Songs sind manchmal melancholisch, doch durch seine augenzwinkernde
+      und wortgewandte Art gelingt es ihm immer wieder, die Stimmung zu heben
+      und das Publikum zu begeistern. Remigiusz liebt es, dort zu sein, wo die
+      Menschen sind, und schafft es, mit seiner Musik eine tiefe Verbindung zu
+      ihnen herzustellen. 
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /images2024/programm/03_remigiusz.jpg
+    button-lesen: Mehr zu Remigiusz Borda
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
