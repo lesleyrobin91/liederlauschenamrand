@@ -1,0 +1,44 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: LOTA
+    description: >-
+      Rockiger Sound, fliegende Haare und jugendlicher Charme- das ist LOTA. Die
+      fünfköpfige Band aus Chojna, Polen hat letztes Jahr unseren
+      Nachwuchswettbewerb gewonnen und das Publikum zum Headbangen gebracht. 
+
+      Auch dieses Jahr möchten wir LOTA eine Bühne bieten und sind gespannt auf
+      die Show, die sie für uns vorbereitet haben. 
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/lar-23-bands-318.jpg
+    button-lesen: Mehr zu LOTA
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
