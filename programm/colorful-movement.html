@@ -1,0 +1,50 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Colorful Movement
+    description: >-
+      Colorful Movement Wir freuen uns, euch die außergewöhnliche Performance
+      "Colorful Movements" präsentieren zu dürfen – eine improvisierte
+      Kombination aus Musik, Tanz und Live-Malerei. Basierend auf dem Glauben,
+      dass Kunst Menschen und ihre Umgebungen bewegt, motiviert und
+      transformiert, möchte "Colorful Movements" zeigen, wie sich Kultur im
+      Laufe der Zeit verändert und weiterentwickelt. Inspiriert von Chimamanda
+      Adichies Worten „Es ist nicht die Kultur, die Menschen macht, sondern die
+      Menschen, die Kultur machen.“ Jede Aufführung von "Colorful Movements" ist
+      einzigartig und besonders, geprägt von den Menschen und dem Ort, an dem
+      sie stattfindet. Aus vielen kleinen Bildern entsteht am Ende ein
+      großformatiges Ganzes, das diesen besonderen Moment mit all seinen
+      Facetten einfängt. 
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/1719515826-d5d592d4f137924b8194aa3942f51a6aaa71a117.png
+    button-lesen: Mehr zu Carla Morera Cruzate
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
