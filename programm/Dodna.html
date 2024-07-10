@@ -1,0 +1,67 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: DODNA
+    description: >-
+      Die Band Dodna wurde im 20. Jahrhundert in einer Highschool gegründet und
+      hat über die Jahre nichts von ihrer jugendlichen Energie und dem Charme
+      ihrer frühen Tage verloren. Ihre Musik ist inspiriert von
+      tschechoslowakischen Zeichentrickfilmen und der Ästhetik des
+      Fernsehstudios Gamma.
+
+      Als einzige Band der Szene in Szczecin, die den politischen Wandel
+      überlebt hat, spielt Dodna bis heute in fast originaler Besetzung und ist
+      so zu einer lebenden Legende der 1980er und 1990er Jahre geworden. In
+      einer Zeit, in der Punk und Rock dominiert haben, gingen sie bewusst gegen
+      den Trend und spielten originelle Tanz- und Unterhaltungsmusik. Auf der
+      Bühne traten sie in schicken Anzügen aus Gremlins-Stoff auf und setzten so
+      einen auffälligen Kontrast zu den allgegenwärtigen Irokesenschnitten,
+      Lederjacken und Holzschuhen.
+
+      Ihre Musik wird oft als Mischung aus Rock'n'Roll, 70er-Jahre-Disco und
+      kitschiger Tanzmusik beschrieben, ergänzt durch eine dreiköpfige
+      Bläsersektion. Die Texte handeln meist von alkoholischen Eskapaden und
+      unerfüllten Lieben, nicht immer auf Polnisch.
+
+      Im Jahr 2018 veröffentlichten sie das Album „Dodna Syndrome“, das ihre
+      bisherige Karriere zusammenfasst. Zuvor gab es nur die Kassette „Als der
+      Strom nach Tanow kam“ aus dem Jahr 1993. Seitdem spielen sie regelmäßig
+      Konzerte und bereiten neues Material für ein Album vor, das sie im
+      Frühjahr aufnehmen möchten.
+
+      Beim nächsten Konzert könnt ihr euch auf eine Mischung aus alten Hits und
+      brandneuen Songs freuen. Verpasst nicht die Gelegenheit, diese
+      einzigartige Band live zu erleben!
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/dodna.jpg
+    button-lesen: Mehr zu DODNA
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
