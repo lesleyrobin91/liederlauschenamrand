@@ -1,0 +1,73 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Künstler
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: TRUPIĘGI
+    description: >-
+      Die Band wurde eigentlich als Geburtstagsgeschenk gegründet, aber die Idee
+      gefiel ihnen so gut, dass sie das Projekt weiterentwickelten und
+      erfolgreich damit tourten. Der Name der Band ist dem Titel eines Gedichts
+      von Bolesław Leśmian entlehnt, und die meisten Texte stammen vom selben
+      Autor.
+
+      Die Band interpretiert die Poesie auf ihre eigene, individuelle und
+      einzigartige Weise, manchmal widersprüchlich, manchmal geradlinig. Bei
+      ihren Konzerten geht es nicht nur um Musik; sie bieten eine intime
+      Begegnung mit der Poesie der Lesmian-Gedichte in ihrer Interpretation.
+      Dabei setzen sie nicht nur Musik, Worte und Gesang ein, sondern auch die
+      Plastizität ihrer Körper, die zusammen ein
+      musikalisch-poetisch-theatralisches Spektakel schaffen.
+
+      Seit nunmehr sieben Jahren präsentiert die Band die Poesie von Bolesław
+      Leśmian so, wie sie sie verstehen und empfinden. Im letzten Jahr
+      veröffentlichten sie ihr Debütalbum "Lesman barfuß". Derzeit arbeiten sie
+      an einem neuen Projekt namens 'Traces'.
+
+      Sie haben bereits über hundertfünfzig Konzerte gegeben, darunter in der
+      Piwnica Pod Baranami in Krakau, im Krakauer Poesie-Salon, in der
+      Landesbibliothek in Zielona Góra, in der Stadtbibliothek in Sulęcin,
+      während des Ińsko-Filmsommers und auf vielen weiteren ungewöhnlichen Orten
+      wie Clubs, Konzertsälen, Herbergen, Kulturzentren, Wäldern, alten
+      Scheunen, Kellern, Wiesen und Feldern.
+
+      Sie traten auf mehreren Festivals auf, darunter AkuStyczeń (Szczecin),
+      transVocale (Słubice), Folklorum (Bielawa Dolna), Wolimierz, Powidz Jam
+      Festival, II Noc Kultury, sowie im Ausland beim Open Air Festival in
+      Berlin und zweimal beim LiederlauschenamRand - Oderaue in Deutschland. Im
+      Mai dieses Jahres wurden sie von der polnischen Botschaft in Paris zu drei
+      Konzerten eingeladen, die auf dem Champagner-Weingut in Trelou Sur Marne,
+      in der polnischen Schule in Paris und im wunderschönen Garten von
+      Luxemburg stattfanden, wo sie vor einem großen internationalen Publikum
+      spielten.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/trupiegi-1.jpg
+    button-lesen: Mehr zu TRUPIĘGI
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
