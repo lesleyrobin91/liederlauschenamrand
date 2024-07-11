@@ -1,0 +1,50 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: camou
+    description: >-
+      Elektroakustyczny offbeat pop z Rostocku. Zespół camou gra we wszystkich
+      możliwych i niemożliwych miejscach od 2012 roku, zaskakując słuchaczy
+      instalacjami dźwiękowymi, które można sklasyfikować jako elektroakustyczny
+      (offbeat) pop. Historia camou zaczyna się w schronie na stacji kolei
+      miejskiej Rostock-Marienehe. Tylko umiarkowanie chroniona przed wiatrem i
+      pogodą, pomimo przejeżdżających pociągów S-Bahn, pierwsze utwory powstały
+      w tym kreatywnym schronieniu. Podczas gdy wpływy reggae i bałkańskie nadal
+      charakteryzowały twórczość dwóch wojowników w tym czasie, coraz częściej
+      uczyli się używać kontroli opóźnienia (podkręcać) i naciskać klawisze
+      syntezatora. To nowe źródło inspiracji przybliżyło ich o krok do początku
+      tęczy.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /images2024/programm/04_camou.jpg
+    button-lesen: Mehr zu Camou
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
