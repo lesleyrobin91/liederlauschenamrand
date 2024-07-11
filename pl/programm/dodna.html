@@ -1,0 +1,61 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Dodna
+    description: >-
+      Zespół Dodna został założony w szkole średniej w XX wieku i przez lata nie
+      stracił nic ze swojej młodzieńczej energii i uroku pierwszych dni. Ich
+      muzyka inspirowana jest czechosłowackimi kreskówkami i estetyką studia
+      telewizyjnego Gamma.
+
+      Jako jedyny zespół na szczecińskiej scenie, który przetrwał zmiany
+      polityczne, Dodna gra do dziś w niemal oryginalnym składzie, stając się
+      tym samym żywą legendą lat 80. i 90. ubiegłego wieku. W czasach dominacji
+      punka i rocka świadomie przeciwstawiali się tym trendom, grając oryginalną
+      muzykę taneczną i rozrywkową. Na scenie pojawiali się w eleganckich
+      garniturach z tkaniny Gremlins, tworząc uderzający kontrast z
+      wszechobecnymi mohawkami, skórzanymi kurtkami i drewniakami.
+
+      Ich muzyka jest często opisywana jako mieszanka rock'n'rolla, disco z lat
+      70. i tandetnej muzyki tanecznej, uzupełniona trzyczęściową sekcją dętą.
+      Teksty piosenek opowiadają głównie o alkoholowych eskapadach i
+      niespełnionej miłości, nie zawsze w języku polskim.
+
+      W 2018 roku wydali album "Dodna Syndrome", który podsumowuje ich
+      dotychczasową karierę. Wcześniej wydali jedynie kasetę "Gdy strumień
+      przyszedł do Tanowa" w 1993 r. Od tego czasu regularnie koncertują i
+      przygotowują nowy materiał na płytę.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/dodna.jpg
+    button-lesen: Mehr zu Dodna
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>

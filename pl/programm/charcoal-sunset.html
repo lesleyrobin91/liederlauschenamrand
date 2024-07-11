@@ -1,0 +1,48 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Charcoal Sunset
+    description: >-
+      Charcoal Sunset pochodzą z Berlina. Ich brzmienie to tygiel rock'n'rolla,
+      country, folku i bluesa. Perkusja i kontrabas / elektryczny bas, pianino /
+      organy, gitara akustyczna / telecaster, wokal i harmonijka ustna tworzą
+      brzmienie, które bardziej pasowałoby do Nashville niż do Berlina. Zespół
+      pracuje obecnie nad długo oczekiwanym kolejnym albumem, a w międzyczasie
+      wykonuje nowe i starsze utwory na żywo.
+
+      Na żywo. Dzięki intensywnej obecności na scenie i wielkiej pasji, czwórka
+      muzyków wie, jak oczarować publiczność.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /images2024/programm/05_charcoal_sunset.jpg
+    button-lesen: Mehr zu Charcoal Sunset
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>

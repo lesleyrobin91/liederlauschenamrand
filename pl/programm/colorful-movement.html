@@ -1,0 +1,49 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Colorful Movement
+    description: >-
+      Mamy przyjemność zaprezentować niezwykły spektakl "Colorful Movements" -
+      improwizowane połączenie muzyki, tańca i malarstwa na żywo. Opierając się
+      na przekonaniu, że sztuka porusza, motywuje i przekształca ludzi i ich
+      otoczenie, "Colourful Movements" ma na celu pokazanie, jak kultura zmienia
+      się i ewoluuje w czasie. Zainspirowany słowami Chimamandy Adichie "To nie
+      kultura tworzy ludzi, ale ludzie tworzą kulturę". Każdy występ "Colourful
+      Movements" jest wyjątkowy i szczególny, ukształtowany przez ludzi i
+      miejsce, w którym się odbywa. Ostatecznie z wielu małych obrazów powstaje
+      wielkoformatowa całość, która oddaje ten wyjątkowy moment ze wszystkimi
+      jego aspektami.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/cm-foto.jpg
+    button-lesen: Mehr zu Colorful Movement
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
