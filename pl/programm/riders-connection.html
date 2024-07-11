@@ -1,0 +1,56 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: Riders Connection
+    description: >-
+      Jeśli chcesz opisać zespół taki jak Riders Connection, musisz wziąć
+      głęboki oddech i przy okazji wymyślić kilka stylów muzycznych na nowo.
+      Trzech sympatycznych facetów, którzy stali się sobie coraz bliżsi dzięki
+      swojej ulicznej muzyce, lubi brzmieć jak pięcioosobowy zespół w
+      wypełnionym po brzegi berlińskim LIDO. I robią to przy minimalnych
+      zasobach. 
+
+      Dlaczego?  
+
+      Wykorzystują naturalne dźwięki swoich ciał, a raczej ust ;) 
+
+      Moritz, niestrudzenie dostarcza kolorowych dźwięków beatboxu, otoczony
+      rytmiczną gitarą akustyczną Philippa, uduchowionym wokalem i unikalną
+      trąbką ustną, podczas gdy groovujące linie basu Alekseja łączą wszystko w
+      jeden uścisk. I tak właśnie jest, na koncercie Riders Connection czujesz
+      się obejmowany nie tylko przez ich muzykę, ale także przez ich urok,
+      któremu dają przestrzeń w często zabawnych interakcjach z publicznością.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /images2024/programm/07_riders_connection.jpg
+    button-lesen: Mehr zu Riders Connection
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>

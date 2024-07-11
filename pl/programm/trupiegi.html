@@ -1,0 +1,67 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: TRUPIĘGI
+    description: >-
+      Zespół powstał w zasadzie jako prezent urodzinowy, ale pomysł spodobał się
+      na tyle, że muzycy rozwijali projekt dalej i z powodzeniem koncertowali z
+      nim. Nazwa zespołu została zapożyczona od tytułu wiersza Bolesława
+      Leśmiana, a większość tekstów jest tego samego autora.
+
+      Zespół interpretuje poezję na swój indywidualny i niepowtarzalny sposób,
+      czasem sprzeczny, czasem prosty. Ich koncerty to nie tylko muzyka, to
+      intymne spotkanie z poezją Leśmiana w ich interpretacji. Wykorzystują nie
+      tylko muzykę, słowa i śpiew, ale także plastyczność swoich ciał, które
+      razem tworzą muzyczny, poetycki i teatralny spektakl.
+
+      Od siedmiu lat zespół prezentuje poezję Bolesława Leśmiana tak, jak ją
+      rozumie i czuje. W ubiegłym roku wydali swój debiutancki album "Lesman
+      boso". Obecnie pracują nad nowym projektem "Ślady". 
+
+      Dali już ponad sto pięćdziesiąt koncertów, m.in. w krakowskiej Piwnicy Pod
+      Baranami, Krakowskim Salonie Poezji, Bibliotece Narodowej w Zielonej
+      Górze, Bibliotece Miejskiej w Sulęcinie, podczas Ińskiego Lata Filmowego
+      oraz w wielu innych nietypowych miejscach, takich jak kluby, sale
+      koncertowe, schroniska, ośrodki kultury, lasy, stare stodoły, piwnice,
+      łąki i pola.
+
+      Występowali na kilku festiwalach, m.in. AkuStyczeń (Szczecin), transVocale
+      (Słubice), Folklorum (Bielawa Dolna), Wolimierz, Powidz Jam Festiwal, II
+      Noc Kultury. W maju tego roku zostali zaproszeni przez Ambasadę RP w
+      Paryżu na trzy koncerty, które odbyły się w winnicy szampana w Trelou Sur
+      Marne, w polskiej szkole w Paryżu oraz w pięknym ogrodzie luksemburskim,
+      gdzie zagrali przed liczną międzynarodową publicznością.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/trupiegi-1.jpg
+    button-lesen: Mehr zu TRUPIĘGI
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>

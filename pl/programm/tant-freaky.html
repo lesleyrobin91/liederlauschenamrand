@@ -1,0 +1,63 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: TANT FREAKY
+    description: >-
+      PSYCHOSOUL, ELECTROJUNGLEJAZZSOUL, NEOHIPPIE, SHAMANIC JAZZ, ENERGIZING
+      GROOVE i VOCAL SPIRAL 
+
+      Z pasji do muzyki i ekspresji tworzą od końca 2019 roku we Wrocławiu,
+      gdzie ich artystyczna droga rozpoczęła się w pracowni perkusyjnej Wiktora
+      Golca.
+
+      W 2022 roku wydali swój pierwszy album "Theory of Love".
+
+      Tworzenie i dzielenie się muzyką jest dla nich terapią i sposobem na
+      szczęście. Wszystko robią sami: od komponowania, nagrywania i miksowania
+      piosenek po kręcenie i montaż teledysków. Grupa składa się z pięciu
+      barwnych osobowości, które jednoczą się w strumieniu świadomości, który
+      nazywają po prostu TANTFREAKY.
+
+      Występują na festiwalach jazzowych - w błocie i w salonach - wszędzie tam,
+      gdzie potrzebne jest nowe brzmienie i emocjonalna głębia. Ich występy to
+      doświadczenie dla uszu, oczu, ciała (w tym dzikiego tańca) i duszy.
+
+      W 2021 roku zagrali na Festiwalu Frutamaniana, Festiwalu Teatru
+      Awangardowego Pestka, Summer Vibes, Source Festival, Fruń Festival,
+      NowoBrzmienia Festival, Sympozjum Teatralnym w Bautzen, Victor Young's
+      Jazz Festival w Mławie i wielu innych wydarzeniach. W 2022 roku zostali
+      finalistami Jazz Junior.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /images2024/programm/09_tantfreaky.jpg
+    button-lesen: Mehr zu TANT FREAKY
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>

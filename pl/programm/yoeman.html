@@ -1,0 +1,51 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Artist
+  description: Liederlauschen am Rand steht für künstlerische Vielfalt.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: KÜNSTLER AM RAND
+    title: YOEMAN
+    description: >-
+      YOEMAN jest prawdziwym mistrzem harfy żydowskiej i udaje mu się tworzyć
+      elektroniczne, transowe bity za pomocą tego tradycyjnego instrumentu i
+      jego unikalnego stylu - bez syntezatora lub innych instrumentów
+      elektronicznych! 
+
+
+      Zanurz się z nami w świecie hipnotycznych rytmów i daj się oczarować
+      innowacyjnym dźwiękom YOEMAN. Nie chcesz przegapić tego magicznego
+      występu! 
+
+
+      Przyjdź i świętuj z nami niezapomnianą muzyczną podróż!
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/yoeman-bild.png
+    button-lesen: Mehr zu YOEMAN
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button center" href="https://www.inawest.com/" target="_blank"> {{ item.button-lesen }} </a>
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
