@@ -1,0 +1,63 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Warsztaty astronomii ulicznej
+  description: Liederlauschen am Rand steht für gemeinsames Erleben.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: WORKSHOPS AM RAND
+    title: Warsztaty astronomii ulicznej
+    description: >-
+      "Astronomia uliczna" oznacza zabranie teleskopu w miejsce publiczne, aby
+      pokazać ludziom, jak wygląda reszta wszechświata. To prosta koncepcja o
+      dużym zasiegu. Dlaczego? 99% ludzi nigdy nie używało teleskopu. W świecie
+      otoczonym światłami straciliśmy kontakt z nocnym niebem.
+
+
+      Astronomia uliczna została spopularyzowana przez mnicha Johna Dobsona. W
+      latach trzydziestych XX wieku, po pracy jako chemik przy Projekcie
+      Manhattan, Dobson wstąpił do klasztoru. Otrzymał zadanie połączenia Wed,
+      ich świętego tekstu, z odkryciami współczesnej astronomii: ideą, że
+      istnieją miliardy galaktyk i że wszechświat się rozszerza. Dobson
+      zdecydował, że najpierw powinien przekonać się o tym na własne oczy. Kiedy
+      udało mu się zbudować nowy rodzaj teleskopu z narzędzi ogrodowych,
+      spojrzał na kratery Księżyca i pomyślał: "Jasna cholera, każdy musi to
+      zobaczyć".
+
+
+      Zaczął wymykać się z klasztoru i zabierać swój teleskop na róg ulicy w
+      Sacramento. Niestety, inni mnisi nie wierzyli, że robi to w nocy, więc
+      wyrzucili go z klasztoru, a on założył Sidewalk Astronomers.
+
+
+      Jeśli chcemy ponownie zobaczyć Drogę Mleczną z centrum miasta, musimy
+      najpierw przypomnieć ludziom, że nocne niebo nadal istnieje. Dołącz do nas
+      w tej podróży, aby ponownie połączyć miasto z nocnym niebem i walczyć z
+      zanieczyszczeniem światłem.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/img-3328-2048x1365.jpg
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
