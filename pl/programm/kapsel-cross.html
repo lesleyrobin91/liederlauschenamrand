@@ -1,0 +1,45 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Beatbox Workshop
+  description: Liederlauschen am Rand steht für gemeinsames Erleben.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: WORKSHOPS AM RAND
+    title: Kapsel Cross
+    description: >-
+      Piasek, drewno i wszystko inne, co można znaleźć. Jest to wykorzystywane
+      do budowy toru, który oczywiście zawiera różne przeszkody. A teraz
+      najważniejsze: kapsle od butelek! Trzeba je zręcznie przerzucić przez
+      trasę aby przekroczyć linię mety. Dzięki naszemu partnerowi, Sulęcińskiemu
+      Ośrodkowi Kultury, ta wspaniała gra jest dostępna w Liederlauschen. Dzieci
+      i dorośli płoną, dzikie burze entuzjazmu, łzy porażki, prawie jak na
+      Mistrzostwach Europy. Gdy wszyscy już się rozgrzeją, w sobotę odbędzie się
+      wielki turniej kapslowego crossu.
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/lar-23-sideprogram-079-kopie.jpg
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
