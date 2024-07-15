@@ -513,6 +513,13 @@ header a {
     color: inherit;
 }
 
+.workshop{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 0rem;
+    color: inherit;
+}
+
 .impressum {
     display: inline-block;
     text-decoration: none;

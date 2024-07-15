@@ -57,6 +57,7 @@ layout: default
     </div>
    {% endfor %}
 
+   <!-- Filter Tage -->
    {% if page.language == "polish" %}
 
    <div class="portfolio-filter center padded-b-1" id="portfolio-filter-pl">
@@ -77,7 +78,7 @@ layout: default
 
    {% endif %}
  
-
+   <!-- Bands -->
    <div class="grid-center margin-b-2 filterable-gallery" id="filterable-gallery">
          
      {% for item in page.bands %}
@@ -103,10 +104,12 @@ layout: default
          </h2>
      </div>
      {% endfor %}
+
      {% for item in page.workshops %}
- 
      <div class="col-4_md-6_sm-12 padded-2 mob-padded">
-         <h3> {{ item.title }} </h3>           
+         <a href="{{ item.url }}" class="workshop">
+            <h3> {{ item.title }} </h3>  
+         </a>         
          <p> {{ item.description }}</p>
      </div>
  
