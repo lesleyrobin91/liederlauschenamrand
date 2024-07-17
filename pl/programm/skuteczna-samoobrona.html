@@ -1,0 +1,52 @@
+---
+layout: default
+language: polish
+seo:
+  title: LIEDERLAUSCHEN am Rand - Skuteczna samoobrona
+  description: Liederlauschen am Rand steht für gemeinsames Erleben.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: WORKSHOPS AM RAND
+    title: Skuteczna samoobrona
+    description: >-
+      Trenowane jest kształtowanie umysłu, sytuacje deeskalacyjne i techniki
+      blokowania, dzięki którym nawet osoby słabsze fizycznie mają duże szanse
+      na bezpieczną ucieczkę.
+
+
+      Warsztaty mają na celu zainspirowanie jasnymi spostrzeżeniami, stworzenie
+      momentów "aha" i wyjaśnienie "magii Kung Fu" w krótkiej formie.
+
+
+      Nie ćwiczy się skomplikowanych sekwencji technik, które szybko się
+      zapomina. Zamiast tego podstawy zostaną przestudiowane, abyś opuścił
+      warsztat czując się pewnie i silnie.
+
+      Maksymalnie 15 uczestników, więcej informacji na
+      https://www.mixed-martial-defense.de/
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/slide-16-9-6.png
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/pl/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
