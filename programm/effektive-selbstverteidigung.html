@@ -1,0 +1,52 @@
+---
+layout: default
+seo:
+  title: LIEDERLAUSCHEN am Rand - Effektive Selbstverteidigung
+  description: Liederlauschen am Rand steht für gemeinsames Erleben.
+  social_image: /images_impressionen/imp_01.jpg
+  keywords: liederlauschen am rand
+  hide-from-google: false
+llar:
+  - headline: WORKSHOPS AM RAND
+    title: Effektive Selbstverteidigung
+    description: >
+      Trainiert wird Mind-Framing, Deeskalationssituationen und
+      Block-Konter-Techniken, mit denen auch körperlich schwächere Menschen eine
+      gute Chance haben, sicher zu entkommen.
+
+
+      Der Workshop soll mit klaren Einsichten inspirieren, "Aha"-Momente
+      erzeugen und die "Magie des Kung Fu" in Kurzform erklären.
+
+
+      Es werden keine komplizierten Abfolgen von Techniken geübt, die man
+      schnell wieder vergisst. Stattdessen werden die Grundlagen studiert, um
+      mit dem guten Gefühl von Selbstvertrauen und Stärke aus dem Workshop zu
+      gehen.
+
+      Maximal 15 Teilnehmer, mehr Infos unter
+      https://www.mixed-martial-defense.de/
+    column-size: col-12
+    aspect-ratio: tall-60
+    background_image: /uploads/slide-16-9-6.png
+    button-back: Zurück zur Übersicht
+---
+<!--------------- Artist Section --------------->
+<section class="grid-center-middle padded-1 parent capped-width">
+    <div class="col-9_sm-12">
+
+        {% for item in page.llar %}
+
+        <h1 class="bold center"> {{ item.headline }} </h1>
+        <h2 class="center {{ item.padded }}"> {{ item.title }} </h2>
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');"> </div>
+        <p class="padded-t-1"> {{ item.description }} </p>
+        <div class="center padded-b"> 
+          <a class="button button-light center" href="/programm"> {{ item.button-back }} </a>
+        </div>
+        
+        
+        {% endfor %}
+
+    </div>    
+</section>
