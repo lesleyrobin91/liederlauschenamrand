@@ -40,14 +40,6 @@ layout: default
        <p> {{ item.description }} </p>
     </div>
     {% endfor %}
- 
- 
-   {% for item in page.rueckblick %}
-    <div class="padded-1">
-       <h2 class="center"> {{ item.title }} </h2>
-       <p> {{ item.description }} </p>
-    </div>
-   {% endfor %}
 
    <!-- Filter Tage -->
    {% if page.language == "polish" %}
@@ -86,11 +78,9 @@ layout: default
  
    </div>
  </section>
- 
- 
 
  <!-- Workshops -->
- <section class="grid-center padded padded-b-0 capped-width">
+ <section class="capped-width-narrow padded-1 padded-b-0">
 
      {% for item in page.header %}
      <div class="col-12 center padded-b-1">
@@ -100,19 +90,22 @@ layout: default
      </div>
      {% endfor %}
 
-     {% for item in page.workshops %}
-     <div class="col-4_md-6_sm-12 padded-2 mob-padded">
-         <a href="{{ item.url }}" class="workshop">
+     <div class="grid-center margin-b-2 filterable-gallery" id="filterable-gallery">
+      
+      {% for item in page.workshops %}
+      <div class="col-4_sm-6_xs-12 padded-2 {{ item.type }} gallery-item">
+         <a href="{{ item.url }}">  <!--  hier war vorher eine class="workshop", wenn ohne Bild-->
             <div class="bg-image" style="background-image: url('{{item.background_image}}');"> 
                <div class="overlay" id="mob-height"> </div>
             </div>
             <h3> {{ item.title }} </h3>  
          </a>         
-      <!-- <p> {{ item.description }}</p> -->
+         <!-- <p> {{ item.description }}</p> -->
      </div>
- 
+   
      {% endfor %}    
- 
+   
+   </div>
  </section>
  
  <!-- Popup Gallery -->
