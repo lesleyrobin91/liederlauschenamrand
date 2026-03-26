@@ -278,6 +278,12 @@ p:last-child {
     z-index: 5;
 }
 
+.mobile-menu li{
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+}
+
 .mobile-menu {
     display: none; 
     background-color: #F9F7F3; 
