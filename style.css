@@ -325,6 +325,15 @@ p:last-child {
     font-size: 1.2rem;
 }
 
+a {
+    color: inherit;
+}
+
+h3 {
+    scroll-margin-top: 100px; /* Wert anpassen je nach gewünschtem Abstand */
+}
+
+
 /* images */ 
 img { 
     max-width: 100%; 
@@ -510,7 +519,13 @@ header a {
     color: inherit; 
     display: inline-block;
     padding-bottom: 5%;
-  }
+}
+
+.faq-nav {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start; /* wichtig! Verhindert dass der Container die volle Höhe einnimmt */
+}
 
 .act{
     display: inline-block;

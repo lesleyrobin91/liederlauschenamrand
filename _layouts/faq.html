@@ -29,8 +29,8 @@ layout: default
       
       {% for item in page.faq%}
 
-         <h3 id="{{ item.topic }}">{{ item.topic }}</h3>
-         <p class="padded-t-1"> {{item.description}} </p>
+         <h3 class="padded-t-1" id="{{ item.topic }}">{{ item.topic }}</h3>
+         <p class="padded-t-1"> {{ item.description | markdownify }} </p>
 
       {% endfor %}
 
