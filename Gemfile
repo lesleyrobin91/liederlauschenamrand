@@ -4,3 +4,5 @@ gem "logger"
 gem "csv"
 gem "base64"
 gem "bigdecimal", "~> 4.0"
+
+gem "webrick", "~> 1.9"
