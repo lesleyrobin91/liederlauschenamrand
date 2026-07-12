@@ -176,6 +176,7 @@ html {
 .left   { text-align: left; }
 .center { text-align: center; }
 .right  { text-align: right; }
+.vcenter { vertical-align: middle; }
 
 .capped-width-wide { max-width: 1600px; margin: auto; }
 .capped-width { max-width: 1200px; margin: auto; }
